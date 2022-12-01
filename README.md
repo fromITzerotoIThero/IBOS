@@ -18,7 +18,7 @@ npm install
 During the development, the "developer server" needs to be started. It takes all of the project files, compiles them, and hosts a http server on local machine. In order to run that server you can either open a terminal and run:
 
 ```
-npm run dev
+npm start
 ```
 
 Alternatively, if you are using VS Code, you can open debug view in the sidebar, on the "run and debug" dropdown choose "Launch development server", and click on the green "run" button next to it.
