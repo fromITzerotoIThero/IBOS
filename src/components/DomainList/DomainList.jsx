@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { supabase } from '../services/supabase';
+import { supabase } from '../../services/supabase';
 import styles from './DomainList.module.css';
 
 function DomainList() {
