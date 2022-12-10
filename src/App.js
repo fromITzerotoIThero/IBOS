@@ -2,12 +2,16 @@ import React from 'react';
 import styles from './App.module.css';
 import DomainList from './components/DomainList/DomainList';
 import Header from './components/Header/Header';
+import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
 
 function App() {
     return (
         <div className={styles.app}>
             <div className={styles.header}>
                 <Header />
+            </div>
+            <div>
+                <WelcomeScreen />
             </div>
             <DomainList />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam tortor, dictum quis bibendum eget, aliquet vel lacus. Proin ut dui sem. Donec fringilla, risus id finibus vestibulum, mi risus mollis felis, nec iaculis dolor diam at diam. Aenean ligula dui, tempor at tellus in, ullamcorper suscipit odio. Etiam consectetur pretium elit ut fermentum. Curabitur vitae ullamcorper odio, non tempus enim. Nunc sollicitudin bibendum diam ut consectetur. Sed id sodales lectus. Donec at consectetur neque, id varius nulla. Nam sit amet molestie ipsum.
