@@ -1,6 +1,6 @@
 .basic_card {
     width: 300px;
-    height: 400px;
+    min-height: 400px;
     margin: 40px 30px 250px 30px;
     font-family: "Source Sans Pro", sans-serif;
     box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2), inset 4px 0 0 0 #37474F;
