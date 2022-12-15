@@ -3,6 +3,7 @@ import styles from './App.module.css';
 import DomainList from './components/DomainList/DomainList';
 import Header from './components/Header/Header';
 import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
+import BasicCard from './components/BasicCard/BasicCard';
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
                 <Header />
             </div>
             <div>
+                <BasicCard />
                 <WelcomeScreen />
             </div>
             <DomainList />
