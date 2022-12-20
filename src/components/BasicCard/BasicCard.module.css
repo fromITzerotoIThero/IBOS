@@ -13,18 +13,21 @@
     text-align: center;
 }
 
-.body {
+.description {
     font-size: 16px;
     padding: 0 2em;
 }
 
 .button {
+    display: inline-block;
     position: relative;
-    left: 164px;
-    top: 264px;
-    padding: 0.75em 2em;
-    background-color: #37474F;
-    color: #fff;
+    left: 9em;
+    bottom: 1em;
+    padding: 1em 2em;
+    max-width: 9em;
     border: none;
     z-index: -1;
+    background-color: #37474F;
+    color: #fff;
+    text-decoration-line: none;
 }
