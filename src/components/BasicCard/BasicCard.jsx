@@ -7,7 +7,9 @@ function BasicCard({ title, description, buttonText, buttonLink }) {
         <div className={styles.card}>
             <div className={styles.title}>{title}</div>
             <div className={styles.description}>{description}</div>
-            <a href={buttonLink} className={styles.button}>{buttonText}</a>
+            <div className={styles.button_container}>
+                <a href={buttonLink} className={styles.button}>{buttonText}</a>
+            </div>
         </div>
     );
 
