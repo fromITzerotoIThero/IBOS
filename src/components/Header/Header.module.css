@@ -1,6 +1,9 @@
 .header {
     display: flex;
     flex-direction: row;
+    position: sticky;
+    top: 0;
+    background: #fff;
     margin: 0;
     padding: 0 2rem;
     min-height: 2rem;

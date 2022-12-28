@@ -16,6 +16,7 @@ function App() {
                 <Route path="/" element={<WelcomeScreen />} />
                 <Route path="/dummypage" element={<DummyPage />} />
                 <Route path="/domains" element={<DomainList />} />
+                <Route path="/basiccard" element={<BasicCard />} />
             </Routes>
         </div>
     );
