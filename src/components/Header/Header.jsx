@@ -7,9 +7,9 @@ function Header() {
     return (
         <div className={styles.header}>
             <Link to="/" className={styles.navbar__entry}>Welcome</Link>
-            <Link to="/domainlist" className={styles.navbar__entry}>Domains</Link>
+            <Link to="/domainsoverview" className={styles.navbar__entry}>Domains</Link>
+            <Link to="/domainlist" className={styles.navbar__entry}>Domain List</Link>
             <Link to="/dummypage" className={styles.navbar__entry}>DummyPage</Link>
-            <Link to="/basiccard" className={styles.navbar__entry}>BasicCard</Link>
         </div>
     );
 

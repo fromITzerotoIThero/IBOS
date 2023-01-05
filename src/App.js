@@ -5,7 +5,8 @@ import Header from './components/Header/Header';
 import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
 import BasicCard from './components/BasicCard/BasicCard';
 import { Route, Routes } from 'react-router-dom';
-import { DummyPage } from './components/DummyPage/DummyPage';
+import { DummyPage } from './pages/DummyPage/DummyPage';
+import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 
 
 function App() {
@@ -14,9 +15,9 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<WelcomeScreen />} />
+                <Route path="/domainsoverview" element={<DomainsOverview />} />
+                <Route path="/domainlist" element={<DomainList />} />
                 <Route path="/dummypage" element={<DummyPage />} />
-                <Route path="/domains" element={<DomainList />} />
-                <Route path="/basiccard" element={<BasicCard />} />
             </Routes>
         </div>
     );
