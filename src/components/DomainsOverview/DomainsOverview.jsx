@@ -17,13 +17,11 @@ function DomainsOverview({ title, description, buttonText, buttonLink }) {
     }, []);
 
     return (
-      <ul className={styles.list}>
+      <div>
         {domains.map(domain =>
-          <li className={styles.element} key={domain.id}>
             <BasicCard title={domain.name} description={domain.short_description} buttonText="Learn more" />
-          </li>
         )}
-      </ul>
+      </div>
     );
   }
 
