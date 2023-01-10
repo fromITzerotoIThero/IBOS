@@ -4,12 +4,9 @@ import { supabase } from '../../services/supabase';
 import styles from './DomainsOverview.module.css';
 import BasicCard from '../BasicCard/BasicCard';
 
-
 function DomainsOverview({ title, description, buttonText, buttonLink }) {
 
     const [domains, setDomains] = useState([]);
-    const [domainDescription, setDomainDescription] = useState([]);
-
 
     useEffect(() => {
       async function fetchData() {
@@ -23,7 +20,7 @@ function DomainsOverview({ title, description, buttonText, buttonLink }) {
       <ul className={styles.list}>
         {domains.map(domain =>
           <li className={styles.element} key={domain.id}>
-            <BasicCard title={domain.name} description={domain.name}/>
+            <BasicCard title={domain.name} description={domain.short_description} buttonText="Learn more" />
           </li>
         )}
       </ul>
