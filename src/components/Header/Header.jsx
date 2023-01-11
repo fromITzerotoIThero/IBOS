@@ -7,7 +7,7 @@ function Header() {
 
     return (
         <div className={styles.header}>
-            <Link to="/" className={styles.navbar__entry}><span><HomeOutlinedIcon />Welcome</span></Link>
+            <Link to="/" className={styles.navbar__entry}><HomeOutlinedIcon className={styles.navbar__icon}/>Welcome</Link>
             <Link to="/domainsoverview" className={styles.navbar__entry}>Domains</Link>
             <Link to="/domainlist" className={styles.navbar__entry}>Domain List</Link>
             <Link to="/dummypage" className={styles.navbar__entry}>DummyPage</Link>
