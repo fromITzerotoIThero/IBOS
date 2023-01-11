@@ -27,7 +27,6 @@
     top: 0.2em;
     right: 0.1em;
     align-content: flex-end;
-    font-weight: lighter;
 }
 
 .navbar__entry:focus {
