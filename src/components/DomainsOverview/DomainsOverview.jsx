@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { supabase } from '../../services/supabase';
-import styles from './DomainsOverview.module.css';
 import BasicCard from '../BasicCard/BasicCard';
 
 function DomainsOverview({ title, description, buttonText, buttonLink }) {

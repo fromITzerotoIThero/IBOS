@@ -7,6 +7,7 @@ import BasicCard from './components/BasicCard/BasicCard';
 import { Route, Routes } from 'react-router-dom';
 import { DummyPage } from './pages/DummyPage/DummyPage';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
+import AccordionElement from './components/AccordionElement/AccordionElement';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/domainlist" element={<DomainList />} />
                 <Route path="/dummypage" element={<DummyPage />} />
             </Routes>
+            <AccordionElement />
         </div>
     );
 }

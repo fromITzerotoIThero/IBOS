@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.2;
+}
+
+.accordion {
+    width: 300px;
+}
+
+.accordion__element {
+    background-color: #eceff1;
+    box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5em;
+    padding: 1em;
+}
+
+.title {
+
+}
+
+.content {
+    font-size: 0.75em;
+}
+
+.icon {
+    align-self: flex-end;
+}
