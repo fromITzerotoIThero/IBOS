@@ -13,12 +13,12 @@ function AccordionElement({ talentName, talentShortDescription }) {
     return (
         <div className={styles.accordion__element}>
             <div className={styles.title} onClick={toggleAccordion}>
-                <div className={styles.title__text}>{talentName}Achiever</div>
+                <div className={styles.title__text}>{talentName}</div>
                 <div class name={styles.icon}>{expanded ? <ExpandLessIcon /> : <ExpandMoreIcon/>}</div>
             </div>
             {expanded && (
                 <div className={styles.content}>
-                {talentShortDescription}People exceptionally talented in the Achiever theme work hard and possess a great deal of stamina. They take immense satisfaction in being busy and productive.
+                {talentShortDescription}
                 </div>
             )}
         </div>
