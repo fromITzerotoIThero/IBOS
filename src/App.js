@@ -20,9 +20,9 @@ function App() {
                 <Route path="/domainsoverview" element={<DomainsOverview />} />
                 <Route path="/domainlist" element={<DomainList />} />
                 <Route path="/dummypage" element={<DummyPage />} />
+                <Route path="/accordion" element={<Accordion />} />
             </Routes>
             <Accordion />
-            <AccordionElement />
         </div>
     );
 }
