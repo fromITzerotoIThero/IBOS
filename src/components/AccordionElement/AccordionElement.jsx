@@ -35,3 +35,5 @@ function AccordionElement({ talentName, talentShortDescription }) {
 export default AccordionElement;
 
 
+
+
