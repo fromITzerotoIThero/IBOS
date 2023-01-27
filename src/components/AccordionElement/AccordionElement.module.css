@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
 
-.accordion__element {
+.collapsed {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -14,25 +14,15 @@
     position: relative;
 }
 
-.accordion__element::after{
-    content:"";
-    position: absolute;
-    height: 1px;
-    width: 90%;
-    bottom: 0;
-    left: 5%;
-    background-color: #78909c;
-}
-
-.accordion__element__expanded {
+.expanded {
     margin: 0.5em 0;
 }
 
-.accordion__element__expanded:first-of-type {
+.expanded:first-of-type {
     margin-top: 0;
 }
 
-.accordion__element__expanded::before {
+.expanded::before {
     content: "";
     width: 4px;
     height: 100%;
@@ -41,10 +31,30 @@
     left: 0;
 }
 
-.accordion__element__expanded.accordion__element::after {
-    content:"";
-    height: 0;
-    width: 0;
+.collapsed::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    left: 5%;
+    top: -1px;
+    background-color: #78909c;
+}
+
+.expanded::after {
+    display: none;
+}
+
+.collapsed:first-of-type::after {
+    display: none;
+}
+
+.expanded + .collapsed::after {
+    display: none;
+}
+
+.collapsed::after + .collapsed::after {
+    display: none;
 }
 
 .title {
@@ -60,8 +70,6 @@
 
 .icon {
     color: #37474F;
-    margin-left: 0.75em;
-    float: right;
 }
 
 .content {
