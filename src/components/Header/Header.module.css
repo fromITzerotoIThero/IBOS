@@ -3,9 +3,9 @@
     top: 0;
     background: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0 2em;
     gap: 1em;
+    min-height: 2.5em;
     box-shadow: 0px 0px 20px #aaa;
     font-family: "Source Sans Pro", sans-serif;
 }
@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     white-space: nowrap;
-    min-height: 3em;
+    padding: 0.5em;
     min-width: 7.5em;
     font-size: 0.75rem;
     color: inherit;
@@ -32,12 +32,3 @@
     bottom: 0;
     left: 10%;
 }
-
-/* Problems encoutered:
-1. with the min-height set on the .header, the flex-items for some reason didn't have the same height
-    (since they're flex I'd expect them to be the height of the heighest flex-item, that is the height of the navbar__entries with icons?)
-    and it caused the .navbar__entries without icons have the horizontal grey bar appear higher, not at the bottom of the container(?)
-
-2. I managed to fix this with setting min-height on the .navbar__entry - is it a good approach?
-
-3. I've also set min-width on the .navbar__entry in order to make the grey bar wider as in the penpot designs. */
