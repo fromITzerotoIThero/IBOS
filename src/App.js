@@ -5,7 +5,6 @@ import Header from './components/Header/Header';
 import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
 import BasicCard from './components/BasicCard/BasicCard';
 import { Route, Routes } from 'react-router-dom';
-import { DummyPage } from './pages/DummyPage/DummyPage';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 import Accordion from './components/Accordion/Accordion';
 import AccordionElement from './components/AccordionElement/AccordionElement';
@@ -19,7 +18,6 @@ function App() {
                 <Route path="/" element={<WelcomeScreen />} />
                 <Route path="/domainsoverview" element={<DomainsOverview />} />
                 <Route path="/domainlist" element={<DomainList />} />
-                <Route path="/dummypage" element={<DummyPage />} />
                 <Route path="/accordion" element={<Accordion />} />
             </Routes>
             <Accordion />
