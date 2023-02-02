@@ -22,7 +22,7 @@ function DomainsOverview({ title, description, buttonText, buttonLink }) {
         )}
       </div>
     );
-  }
+}
 
-  export default DomainsOverview;
+export default DomainsOverview;
 
