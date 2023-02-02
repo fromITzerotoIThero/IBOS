@@ -3,11 +3,10 @@ import styles from './App.module.css';
 import DomainList from './components/DomainList/DomainList';
 import Header from './components/Header/Header';
 import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
-import BasicCard from './components/BasicCard/BasicCard';
 import { Route, Routes } from 'react-router-dom';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 import Accordion from './components/Accordion/Accordion';
-import AccordionElement from './components/AccordionElement/AccordionElement';
+import DomainsDetails from './components/DomainDetails/DomainDetails';
 
 
 function App() {
@@ -20,6 +19,7 @@ function App() {
                 <Route path="/domainlist" element={<DomainList />} />
                 <Route path="/accordion" element={<Accordion />} />
             </Routes>
+            <DomainsDetails />
             <Accordion />
         </div>
     );

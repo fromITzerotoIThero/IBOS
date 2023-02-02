@@ -1,0 +1,13 @@
+.list {
+    list-style-type: none;
+}
+
+.element {
+    padding: 10px 0;
+    width: 300px;
+}
+
+li {
+    margin: 10px 0;
+    border: 1px solid black;
+}
