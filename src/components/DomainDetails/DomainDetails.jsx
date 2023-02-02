@@ -6,15 +6,16 @@ import styles from './DomainDetails.module.css';
 function DomainDetails() {
 
     const [themes, setThemes] = useState([]);
-    const [domains, setDomains] = useState([])
+    const [domain, setDomain] = useState([])
 
     useEffect(() => {
       async function fetchData() {
         const { data } = await supabase
             .from('Themes')
             .select()
+            .eq('domain_id', '70a7d207-499f-4973-bb29-458af6f3a1f9')
             // .select('name', 'Domains' ('name'))
-            .order('domain_id')
+            // .order('domain_id')
 
         setThemes(data);
         // setDomains(data);
@@ -32,6 +33,7 @@ function DomainDetails() {
                     <li className={styles.element} key={theme.id}>
                         <div>{theme.name}</div>
                         <div>{theme.id}</div>
+                        <div>{theme.domain_id}</div>
                         {/* <div>{theme.description}</div> */}
                     </li>
                 </div>
