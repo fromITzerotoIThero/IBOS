@@ -1,13 +1,14 @@
-.list {
-    list-style-type: none;
+.containter {
+    width: 360px;
+    font-family: "Source Sans Pro", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.element {
-    padding: 10px 0;
-    width: 300px;
+.title {
+    height: 100px;
+    background-color: #e97200;
+    color: #fff;
 }
 
-li {
-    margin: 10px 0;
-    border: 1px solid black;
-}
