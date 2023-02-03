@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../../services/supabase';
 import BasicCard from '../BasicCard/BasicCard';
 
-function DomainsOverview({ title, description, buttonText, buttonLink }) {
+function DomainsOverview() {
 
     const [domains, setDomains] = useState([]);
 
@@ -18,7 +18,7 @@ function DomainsOverview({ title, description, buttonText, buttonLink }) {
     return (
       <div>
         {domains.map(domain =>
-            <BasicCard title={domain.name} description={domain.short_description} buttonText="Learn more" buttonLink="/accordion"/>
+            <BasicCard title={domain.name} description={domain.short_description} buttonText="Learn more" buttonLink="/domaindetails"/>
         )}
       </div>
     );

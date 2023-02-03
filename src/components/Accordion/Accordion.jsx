@@ -1,9 +1,8 @@
 import React from 'react';
-import { useState } from 'react';
 import styles from './Accordion.module.css'
 import AccordionElement from '../AccordionElement/AccordionElement';
 
-function Accordion({ themeName, themeDescription }) {
+function Accordion() {
 
     return (
         <div className={styles.accordion}>
