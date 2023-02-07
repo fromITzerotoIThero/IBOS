@@ -8,6 +8,7 @@
     min-height: 2.5em;
     box-shadow: 0px 0px 20px #aaa;
     font-family: "Source Sans Pro", sans-serif;
+    z-index: 1;
 }
 
 .navbar__entry {
