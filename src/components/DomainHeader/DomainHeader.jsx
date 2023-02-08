@@ -15,7 +15,6 @@ function DomainHeader() {
                 .from('Domains')
                 .select('name')
                 // .eq('id', '70a7d207-499f-4973-bb29-458af6f3a1f9')
-
             setDomainName(data);
         }
         fetchData();
