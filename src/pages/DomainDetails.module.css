@@ -1,0 +1,13 @@
+.container {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: pre-wrap;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.details {
+    padding: 24px 28px;
+    font-size: 1em
+}
