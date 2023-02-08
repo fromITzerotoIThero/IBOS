@@ -14,7 +14,7 @@ function DomainHeader() {
             const { data } = await supabase
                 .from('Domains')
                 .select('name')
-                .eq('id', 'id')
+                // .eq('id', '70a7d207-499f-4973-bb29-458af6f3a1f9')
 
             setDomainName(data);
         }
