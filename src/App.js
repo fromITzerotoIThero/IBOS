@@ -6,8 +6,7 @@ import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
 import { Route, Routes } from 'react-router-dom';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 import Accordion from './components/Accordion/Accordion';
-import DomainDetails from './components/DomainDetails/DomainDetails';
-import AccordionElement from './components/AccordionElement/AccordionElement';
+import DomainDetails from './pages/DomainDetails';
 
 function App() {
     return (
@@ -20,10 +19,6 @@ function App() {
                 <Route path="/accordion" element={<Accordion />} />
                 <Route path="/domaindetails" element={<DomainDetails />} />
             </Routes>
-            <DomainDetails />
-            <Accordion />
-            <AccordionElement />
-            <AccordionElement />
         </div>
     );
 }
