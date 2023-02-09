@@ -21,7 +21,7 @@ function DomainsOverview() {
     return (
         <div>
             {domains.map(domain =>
-                <BasicCard title={domain.name} description={domain.short_description} buttonText="Learn more" buttonLink="/domaindetails" />
+                <BasicCard title={domain.name} description={domain.short_description} buttonText="Learn more" buttonLink={`/domaindetails/${domain.id}`} key={domain.id}/>
             )}
         </div>
     );
