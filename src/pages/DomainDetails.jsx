@@ -1,5 +1,6 @@
 import React from 'react';
-import { useEffect, useState, useParams } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { supabase } from '../services/supabase';
 import AccordionElement from '../components/AccordionElement/AccordionElement';
 import styles from './DomainDetails.module.css';
@@ -7,7 +8,7 @@ import DomainHeader from '../components/DomainHeader/DomainHeader';
 
 function DomainDetails() {
 
-    // const { id } = useParams();
+    const { id } = useParams();
     const [domain, setDomain] = useState({ Themes: [] });
 
     useEffect(() => {
@@ -15,7 +16,7 @@ function DomainDetails() {
             const { data } = await supabase
                 .from('Domains')
                 .select('*, Themes(*)')
-                // .eq('id', `${domain.id}`)
+                .eq('id', `${id}`)
 
             setDomain(data[0]);
         }
