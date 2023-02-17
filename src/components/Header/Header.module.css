@@ -24,12 +24,12 @@
     position: relative;
 }
 
-.navbar__entry:focus::after {
+.active {
     content: "";
     width: 80%;
     height: 4px;
-    background-color: #37474F;
     position: absolute;
     bottom: 0;
     left: 10%;
+    background-color: #37474F;
 }
