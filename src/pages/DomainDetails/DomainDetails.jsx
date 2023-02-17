@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { supabase } from '../services/supabase';
-import AccordionElement from '../components/AccordionElement/AccordionElement';
+import { supabase } from '../../services/supabase';
+import AccordionElement from '../../components/AccordionElement/AccordionElement';
 import styles from './DomainDetails.module.css';
-import DomainHeader from '../components/DomainHeader/DomainHeader';
+import DomainHeader from '../../components/DomainHeader/DomainHeader';
 
 function DomainDetails() {
 

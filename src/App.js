@@ -2,11 +2,11 @@ import React from 'react';
 import styles from './App.module.css';
 import DomainList from './components/DomainList/DomainList';
 import Header from './components/Header/Header';
-import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
+import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 import { Route, Routes } from 'react-router-dom';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 import Accordion from './components/Accordion/Accordion';
-import DomainDetails from './pages/DomainDetails';
+import DomainDetails from './pages/DomainDetails/DomainDetails';
 
 function App() {
     return (
