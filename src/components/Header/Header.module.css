@@ -24,7 +24,7 @@
     position: relative;
 }
 
-.active {
+.navbar__entry::after.active {
     content: "";
     width: 80%;
     height: 4px;
