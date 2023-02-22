@@ -25,7 +25,7 @@ function DomainDetails() {
 
     return (
         <div className={styles.container}>
-            <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id}/>
+            <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
             <div className={styles.details}>{domain.details}</div>
             <div>
                 {domain.Themes.map(theme =>

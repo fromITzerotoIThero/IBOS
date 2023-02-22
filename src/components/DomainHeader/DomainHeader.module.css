@@ -6,11 +6,27 @@
     padding: 0 32px;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 24px;
-    background-color: #37474f;
+    background-color: var(--theme-color);
     color: #fff;
 }
 
 .icon {
     color: #fff;
+}
+
+.executing {
+    --theme-color: var(--executing);
+}
+
+.influencing {
+    --theme-color: var(--influencing);
+}
+
+.relationship-building {
+    --theme-color: var(--relationship-building);
+}
+
+.strategic-thinking {
+    --theme-color: var(--strategic-thinking);
 }
 

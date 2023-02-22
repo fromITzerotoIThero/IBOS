@@ -9,3 +9,12 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+:root {
+    --default-color: #37474F;
+    --executing: #7b2481;
+    --influencing: #e97200;
+    --relationship-building: #0070cd;
+    --strategic-thinking: #00945d;
+    --theme-color: var(--default-color);
+}
