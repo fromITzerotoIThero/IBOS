@@ -25,6 +25,7 @@ function DomainDetails() {
 
     return (
         <div className={styles.container}>
+            {/* <DomainHeader theme_color={domain.name.toLowerCase().replace(' ', '-')} backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} /> */}
             <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
             <div className={styles.details}>{domain.details}</div>
             <div>
