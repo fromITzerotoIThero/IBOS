@@ -11,3 +11,19 @@
     padding: 24px 28px;
     font-size: 1em
 }
+
+.executing {
+    --theme-color: var(--executing);
+}
+
+.influencing {
+    --theme-color: var(--influencing);
+}
+
+.relationship-building {
+    --theme-color: var(--relationship-building);
+}
+
+.strategic-thinking {
+    --theme-color: var(--strategic-thinking);
+}

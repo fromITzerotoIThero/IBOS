@@ -23,18 +23,35 @@ function DomainDetails() {
         fetchData();
     }, []);
 
+
     return (
-        <div className={styles.container}>
-            {/* <DomainHeader theme_color={domain.name.toLowerCase().replace(' ', '-')} backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} /> */}
-            <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
-            <div className={styles.details}>{domain.details}</div>
-            <div>
-                {domain.Themes.map(theme =>
-                    <AccordionElement theme_color={domain.name.toLowerCase().replace(' ', '-')} themeName={theme.name} themeDescription={theme.description} key={theme.id} />
-                )}
+        <div className={styles[domain.name.toLowerCase().replace(' ', '-')]}>
+            <div className={styles.container}>
+                <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
+                <div className={styles.details}>{domain.details}</div>
+                <div>
+                    {domain.Themes.map(theme =>
+                        <div className={styles[domain.name.toLowerCase().replace(' ', '-')]} key={theme.id} >
+                            <AccordionElement themeName={theme.name} themeDescription={theme.description} />
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
+
+        // <div className={styles.container}>
+        //     <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
+        //     <div className={styles.details}>{domain.details}</div>
+        //     <div>
+        //         {domain.Themes.map(theme =>
+        //             <div className={styles[domain.name.toLowerCase().replace(' ', '-')]}  key={theme.id} >
+        //                 <AccordionElement themeName={theme.name} themeDescription={theme.description}/>
+        //             </div>
+        //         )}
+        //     </div>
+        // </div>
     );
+
 }
 
 export default DomainDetails;

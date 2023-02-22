@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { supabase } from '../../services/supabase';
 import BasicCard from '../BasicCard/BasicCard';
-
+import styles from './DomainsOverview.module.css';
 
 function DomainsOverview() {
 
@@ -21,7 +21,10 @@ function DomainsOverview() {
     return (
         <div>
             {domains.map(domain =>
-                <BasicCard theme_color={domain.name.toLowerCase().replace(' ', '-')} title={domain.name} description={domain.short_description} buttonText="Learn more" buttonLink={`/domaindetails/${domain.id}`} key={domain.id}/>
+                <div className={styles[domain.name.toLowerCase().replace(' ', '-')]}>
+                    <BasicCard title={domain.name} description={domain.short_description} buttonText="Learn more" buttonLink={`/domaindetails/${domain.id}`} key={domain.id}/>
+                </div>
+
             )}
         </div>
     );
