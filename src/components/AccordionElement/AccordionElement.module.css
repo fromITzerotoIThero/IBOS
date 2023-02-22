@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
 
+.executing {
+    --theme-color: var(--executing);
+}
+
+.influencing {
+    --theme-color: var(--influencing);
+}
+
+.relationship-building {
+    --theme-color: var(--relationship-building);
+}
+
+.strategic-thinking {
+    --theme-color: var(--strategic-thinking);
+}
+
 .collapsed {
     display: flex;
     flex-direction: column;
@@ -26,7 +42,7 @@
     content: "";
     width: 4px;
     height: 100%;
-    background-color: #37474F;
+    background-color: var(--theme-color);
     position: absolute;
     left: 0;
 }
@@ -76,3 +92,4 @@
 .content__collapsed {
     display: none;
 }
+

@@ -30,7 +30,7 @@ function DomainDetails() {
             <div className={styles.details}>{domain.details}</div>
             <div>
                 {domain.Themes.map(theme =>
-                    <AccordionElement themeName={theme.name} themeDescription={theme.description} key={theme.id} />
+                    <AccordionElement theme_color={domain.name.toLowerCase().replace(' ', '-')} themeName={theme.name} themeDescription={theme.description} key={theme.id} />
                 )}
             </div>
         </div>
