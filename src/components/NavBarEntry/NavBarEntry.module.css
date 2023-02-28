@@ -11,7 +11,7 @@
     position: relative;
 }
 
-.navbar__entry::after.active {
+.active::after {
     content: "";
     width: 80%;
     height: 4px;
