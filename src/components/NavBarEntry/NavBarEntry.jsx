@@ -1,14 +1,13 @@
 import React from 'react';
 import styles from './NavBarEntry.module.css';
 import { NavLink } from 'react-router-dom';
-import classNames from 'classnames';
 
 function NavBarEntry({ targetName, entryName, icon }) {
 
     return (
         <NavLink
             to={targetName}
-            className={classNames(styles.navbar__entry, [({ isActive }) => isActive ? styles.active : "" ])}>
+            className={({ isActive }) => isActive ? `${styles.navbar__entry} ${styles.active}` : `${styles.navbar__entry}` }>
             {icon}
             {entryName}
         </NavLink>
