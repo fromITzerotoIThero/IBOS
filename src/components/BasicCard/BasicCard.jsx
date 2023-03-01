@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './BasicCard.module.css';
 import { Link } from 'react-router-dom';
+import CloseButton from '../CloseButton/CloseButton'
 
 function BasicCard({ title, description, buttonText, buttonLink }) {
 
@@ -11,6 +12,7 @@ function BasicCard({ title, description, buttonText, buttonLink }) {
             <div className={styles.button_container}>
                 <Link to={buttonLink} className={styles.button}>{buttonText}</Link>
             </div>
+            <CloseButton />
         </div>
     );
 }
