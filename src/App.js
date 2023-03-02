@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import styles from './App.module.css';
 import DomainList from './components/DomainList/DomainList';
 import Header from './components/Header/Header';
@@ -9,11 +10,30 @@ import Accordion from './components/Accordion/Accordion';
 import DomainDetails from './pages/DomainDetails/DomainDetails';
 
 function App() {
+
+    const [showWelcomeScreen, setShowWelcomeScreen] = useState(
+        !localStorage.getItem("hasClosedWelcomeScreen")
+    );
+
+    const handleWelcomeScreenClose = () => {
+        localStorage.setItem("hasClosedWelcomeScreen", true);
+        setShowWelcomeScreen(false);
+    };
+
     return (
         <div>
             <Header />
             <Routes>
-                <Route path="/" element={<WelcomeScreen />} />
+                <Route
+                    path="/"
+                    element=
+
+                    {showWelcomeScreen && (
+                        <WelcomeScreen
+                            onClose={handleWelcomeScreenClose}
+                        />
+                    )}
+                />
                 <Route path="/domainsoverview" element={<DomainsOverview />} />
                 <Route path="/domainlist" element={<DomainList />} />
                 <Route path="/accordion" element={<Accordion />} />
