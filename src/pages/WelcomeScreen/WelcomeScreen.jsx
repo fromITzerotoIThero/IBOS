@@ -1,8 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import BasicCard from '../../components/BasicCard/BasicCard';
 
 function WelcomeScreen() {
+
+    const handleWelcomeScreenClose = useCallback(() => {
+        localStorage.setItem("visibleWelcomeScreen", "false");
+        setVisibleWelcomeScreen("false");
+    });
 
     const [ visibleWelcomeScreen, setVisibleWelcomeScreen ] = useState(
         localStorage.getItem("visibleWelcomeScreen")
@@ -10,10 +15,7 @@ function WelcomeScreen() {
 
     let showWelcomeScreen = shouldShow(visibleWelcomeScreen);
 
-    const handleWelcomeScreenClose = () => {
-        localStorage.setItem("visibleWelcomeScreen", "false");
-        setVisibleWelcomeScreen("false");
-    };
+
 
 
     return (
