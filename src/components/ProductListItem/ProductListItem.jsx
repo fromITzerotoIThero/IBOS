@@ -7,8 +7,8 @@ function ProductListItem({ imgSrc, imgAlt, productName, currentPrice, originalPr
         <div className={styles.container}>
             {/* <img src={imgSrc} alt={imgAlt} className={styles.image} /> */}
             <img
-                src="C:\Users\T430\OneDrive\Pulpit\BOYS\Chopaki"
-                alt=""
+                src="../../../../../../Pulpit/BOYS/Chopaki/my-favorite.png"
+                alt="My favorite CHOPAKI boy"
                 className={styles.image}
             />
             <div className={styles.text_container}>

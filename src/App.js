@@ -8,6 +8,8 @@ import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 import DomainDetails from './pages/DomainDetails/DomainDetails';
 import styles from './App.module.css';
 
+import ProductListItem from './components/ProductListItem/ProductListItem';
+
 
 function App() {
 
@@ -39,8 +41,8 @@ function App() {
                 <Route path="/domaindetails">
                     <Route path=":id" element={<DomainDetails />} />
                 </Route>
-
             </Routes>
+            <ProductListItem />
         </div>
     );
 }
