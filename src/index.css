@@ -12,6 +12,7 @@ html {
 
 :root {
     --default-color: #37474F;
+    --background-grey: #eceff1;
     --executing: #7b2481;
     --influencing: #e97200;
     --relationship-building: #0070cd;
