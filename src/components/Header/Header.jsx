@@ -19,12 +19,6 @@ function Header() {
                 icon={<ListIcon />}
                 entryName="Domains"
             />
-
-            <NavBarEntry
-                targetName="/domainlist"
-                icon={<ListIcon />}
-                entryName="Domain List"
-            />
         </div>
     );
 
