@@ -4,18 +4,16 @@ import BasicCard from '../../components/BasicCard/BasicCard';
 
 function WelcomeScreen() {
 
-    const handleWelcomeScreenClose = useCallback(() => {
-        localStorage.setItem("visibleWelcomeScreen", "false");
-        setVisibleWelcomeScreen("false");
-    });
-
     const [ visibleWelcomeScreen, setVisibleWelcomeScreen ] = useState(
         localStorage.getItem("visibleWelcomeScreen")
     );
 
     let showWelcomeScreen = shouldShow(visibleWelcomeScreen);
 
-
+    const handleWelcomeScreenClose = useCallback(() => {
+        localStorage.setItem("visibleWelcomeScreen", "false");
+        setVisibleWelcomeScreen("false");
+    }, [visibleWelcomeScreen]);
 
 
     return (
