@@ -1,13 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
-import styles from './App.module.css';
-import DomainList from './components/DomainList/DomainList';
-import Header from './components/Header/Header';
-import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 import { Route, Routes } from 'react-router-dom';
-import DomainsOverview from './components/DomainsOverview/DomainsOverview';
+import Header from './components/Header/Header';
 import Accordion from './components/Accordion/Accordion';
+import DomainsOverview from './components/DomainsOverview/DomainsOverview';
+import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 import DomainDetails from './pages/DomainDetails/DomainDetails';
+import styles from './App.module.css';
+
 
 function App() {
 
@@ -35,7 +35,6 @@ function App() {
                     )}
                 />
                 <Route path="/domainsoverview" element={<DomainsOverview />} />
-                <Route path="/domainlist" element={<DomainList />} />
                 <Route path="/accordion" element={<Accordion />} />
                 <Route path="/domaindetails">
                     <Route path=":id" element={<DomainDetails />} />
