@@ -28,11 +28,14 @@ function DomainDetails() {
         <div>
             {domain != null ?
                 <div className={styles.container}>
-                    <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
+                    <div className={styles[modifyName(domain.name)]}>
+                        <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
+                    </div>
                     <div className={styles.details}>{domain.details}</div>
                     <div>
                         {domain.Themes.map(theme =>
-                            <div className={styles[domain.name.toLowerCase().replace(' ', '-')]} key={theme.id} >
+                            // <div className={styles[domain.name.toLowerCase().replace(' ', '-')]} key={theme.id} >
+                            <div className={styles[modifyName(domain.name)]} key={theme.id} >
                                 <AccordionElement themeName={theme.name} themeDescription={theme.description} />
                             </div>
                         )}
@@ -47,3 +50,8 @@ function DomainDetails() {
 }
 
 export default DomainDetails;
+
+function modifyName(string) {
+    const name = string;
+    return name.toLowerCase().replace(' ', '-');
+}

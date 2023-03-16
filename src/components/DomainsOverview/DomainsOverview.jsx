@@ -21,7 +21,7 @@ function DomainsOverview() {
     return (
         <div>
             {domains.map(domain =>
-                <div className={styles[domain.name.toLowerCase().replace(' ', '-')]}>
+                <div className={styles[modifyName(domain.name)]}>
                     <BasicCard title={domain.name} description={domain.short_description} buttonText="Learn more" buttonLink={`/domaindetails/${domain.id}`} key={domain.id}/>
                 </div>
 
@@ -32,3 +32,7 @@ function DomainsOverview() {
 
 export default DomainsOverview;
 
+function modifyName(string) {
+    const name = string;
+    return name.toLowerCase().replace(' ', '-');
+}
