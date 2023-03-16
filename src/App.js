@@ -34,13 +34,12 @@ function App() {
                         />
                     )}
                 />
-                <Route path="/domainsoverview" element={<DomainsOverview />}>
-                    <Route path="domiansoverview/domaindetails">
-                        <Route path=":id" element={<DomainDetails />} />
-                    </Route>
-                </Route>
+                <Route path="/domainsoverview" element={<DomainsOverview />} />
                 <Route path="/domainlist" element={<DomainList />} />
                 <Route path="/accordion" element={<Accordion />} />
+                <Route path="/domaindetails">
+                    <Route path=":id" element={<DomainDetails />} />
+                </Route>
 
             </Routes>
         </div>
