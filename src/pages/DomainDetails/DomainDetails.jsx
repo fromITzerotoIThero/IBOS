@@ -9,7 +9,7 @@ import DomainHeader from '../../components/DomainHeader/DomainHeader';
 function DomainDetails() {
 
     const { id } = useParams();
-    const [domain, setDomain] = useState({ Themes: [] });
+    const [domain, setDomain] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -25,31 +25,23 @@ function DomainDetails() {
 
 
     return (
-        <div className={styles[domain.name.toLowerCase().replace(' ', '-')]}>
-            <div className={styles.container}>
-                <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
-                <div className={styles.details}>{domain.details}</div>
-                <div>
-                    {domain.Themes.map(theme =>
-                        <div className={styles[domain.name.toLowerCase().replace(' ', '-')]} key={theme.id} >
-                            <AccordionElement themeName={theme.name} themeDescription={theme.description} />
-                        </div>
-                    )}
+        <div>
+            {domain != null ?
+                <div className={styles.container}>
+                    <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
+                    <div className={styles.details}>{domain.details}</div>
+                    <div>
+                        {domain.Themes.map(theme =>
+                            <div className={styles[domain.name.toLowerCase().replace(' ', '-')]} key={theme.id} >
+                                <AccordionElement themeName={theme.name} themeDescription={theme.description} />
+                            </div>
+                        )}
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        // <div className={styles.container}>
-        //     <DomainHeader backwardLink="/domainsoverview" domainName={domain.name} key={domain.id} />
-        //     <div className={styles.details}>{domain.details}</div>
-        //     <div>
-        //         {domain.Themes.map(theme =>
-        //             <div className={styles[domain.name.toLowerCase().replace(' ', '-')]}  key={theme.id} >
-        //                 <AccordionElement themeName={theme.name} themeDescription={theme.description}/>
-        //             </div>
-        //         )}
-        //     </div>
-        // </div>
+                : <div>Loading...</div>
+            }
+        </div>
     );
 
 }
