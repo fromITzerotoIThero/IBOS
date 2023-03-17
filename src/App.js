@@ -41,7 +41,33 @@ function App() {
                     <Route path=":id" element={<DomainDetails />} />
                 </Route>
             </Routes>
-            <ProductListItem />
+            <ProductListItem
+                imgSrc="../../../../../../Pulpit/BOYS/Chopaki/my-favorite.png"
+                imgAlt="My favorite CHOPAKI boy"
+                productName="Product that has a veeeeeeeeeeeeeeeeeeeery long description"
+                currentPrice="12.99"
+                originalPrice="12.99"
+                discountPercentage="0"
+                isDiscounted={false}
+            />
+            <ProductListItem
+                imgSrc="../../../../../../Pulpit/BOYS/Chopaki/my-favorite.png"
+                imgAlt="My favorite CHOPAKI boy"
+                productName="Different product name that is too long and if it does overflow"
+                currentPrice="8.99"
+                originalPrice="8.99"
+                discountPercentage="0"
+                isDiscounted={false}
+            />
+            <ProductListItem
+                imgSrc="./images/my-favorite.png"
+                imgAlt="My favorite CHOPAKI boy"
+                productName="Discounted product name"
+                currentPrice="8.99"
+                originalPrice="14.99"
+                discountPercentage="40"
+                isDiscounted={true}
+            />
         </div>
     );
 }

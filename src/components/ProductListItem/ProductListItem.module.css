@@ -6,12 +6,19 @@
     height: 80px;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 1.2;
+    background-color: #cfd8dc;
+}
+
+.image_container {
+    width: 80px;
+    height: 80px;
+    position: relative;
 }
 
 .image {
-    width: 80px;
-    height: 80px;
+    display: inline-block;
     font-size: 12px;
+    background-color: #cfd8dc;
 }
 
 .text_container {
@@ -19,16 +26,24 @@
     flex-direction: column;
     justify-content: stretch;
     width: 280px;
-    padding: 12px;
+    height: 80px;
+    padding: 0 12px;
 }
 
 .price_row {
     font-size: 24px;
 }
 
-.original_price {
-    font-size: 1em;
+.before_discount {
+    font-size: 16px;
     color: #78909c;
+    text-decoration: line-through;
+}
+
+.discount_band {
+    position: absolute;
+    color: #fff;
+    background-color: var(--executing);
 }
 
 .product_name {
