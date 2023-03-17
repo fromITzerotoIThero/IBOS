@@ -6,7 +6,6 @@ import Accordion from './components/Accordion/Accordion';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 import DomainDetails from './pages/DomainDetails/DomainDetails';
-import styles from './App.module.css';
 
 import ProductListItem from './components/ProductListItem/ProductListItem';
 
