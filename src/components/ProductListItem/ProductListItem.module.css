@@ -21,6 +21,22 @@
     background-color: #cfd8dc;
     width: 80px;
     height: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.discount_band {
+    color: #fff;
+    background-color: var(--executing);
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    width: 80px;
+    padding: 2px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 20px;
+    top: 12px;
 }
 
 .text_container {
@@ -29,7 +45,7 @@
     justify-content: stretch;
     width: 280px;
     height: 80px;
-    padding: 0 12px;
+    padding: 0 24px 0 12px;
 }
 
 .price_row {
@@ -40,14 +56,6 @@
     font-size: 16px;
     color: #78909c;
     text-decoration: line-through;
-}
-
-.discount_band {
-    position: absolute;
-    top: 0;
-    transform: rotate(90deg);
-    color: #fff;
-    background-color: var(--executing);
 }
 
 .product_name {

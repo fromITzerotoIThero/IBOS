@@ -9,7 +9,7 @@ function ProductListItem({ imgSrc, imgAlt, productName, currentPrice, originalPr
             <div className={styles.image_container}>
                 <img src={imgSrc} alt={imgAlt} className={styles.image} />
                 {isDiscounted &&
-                    <div className={style.discount_band}>{discountPercentage}% off</div>
+                    <div className={styles.discount_band}>{discountPercentage}% off</div>
                 }
             </div>
             <div className={styles.text_container}>
