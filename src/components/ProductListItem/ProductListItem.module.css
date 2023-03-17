@@ -6,19 +6,21 @@
     height: 80px;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 1.2;
-    background-color: #cfd8dc;
 }
 
 .image_container {
     width: 80px;
     height: 80px;
     position: relative;
+    overflow: hidden;
 }
 
 .image {
     display: inline-block;
     font-size: 12px;
     background-color: #cfd8dc;
+    width: 80px;
+    height: auto;
 }
 
 .text_container {
@@ -42,6 +44,8 @@
 
 .discount_band {
     position: absolute;
+    top: 0;
+    transform: rotate(90deg);
     color: #fff;
     background-color: var(--executing);
 }

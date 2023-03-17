@@ -6,8 +6,10 @@ import Accordion from './components/Accordion/Accordion';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 import DomainDetails from './pages/DomainDetails/DomainDetails';
-
 import ProductListItem from './components/ProductListItem/ProductListItem';
+import kitty from './images/hello-kitty.jpg';
+import boy1 from './images/my-favorite.png';
+import boy2 from './images/such-a-pretty-one.png';
 
 
 function App() {
@@ -42,7 +44,7 @@ function App() {
                 </Route>
             </Routes>
             <ProductListItem
-                imgSrc="../../../../../../Pulpit/BOYS/Chopaki/my-favorite.png"
+                imgSrc={boy1}
                 imgAlt="My favorite CHOPAKI boy"
                 productName="Product that has a veeeeeeeeeeeeeeeeeeeery long description"
                 currentPrice="12.99"
@@ -51,7 +53,7 @@ function App() {
                 isDiscounted={false}
             />
             <ProductListItem
-                imgSrc="../../../../../../Pulpit/BOYS/Chopaki/my-favorite.png"
+                imgSrc={boy2}
                 imgAlt="My favorite CHOPAKI boy"
                 productName="Different product name that is too long and if it does overflow"
                 currentPrice="8.99"
@@ -60,7 +62,7 @@ function App() {
                 isDiscounted={false}
             />
             <ProductListItem
-                imgSrc="./images/my-favorite.png"
+                imgSrc={kitty}
                 imgAlt="My favorite CHOPAKI boy"
                 productName="Discounted product name"
                 currentPrice="8.99"
