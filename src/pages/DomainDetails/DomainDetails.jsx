@@ -5,6 +5,7 @@ import { supabase } from '../../services/supabase';
 import AccordionElement from '../../components/AccordionElement/AccordionElement';
 import styles from './DomainDetails.module.css';
 import DomainHeader from '../../components/DomainHeader/DomainHeader';
+import { modifyName } from '../../utils/domain';
 
 function DomainDetails() {
 
@@ -51,7 +52,4 @@ function DomainDetails() {
 
 export default DomainDetails;
 
-function modifyName(string) {
-    const name = string;
-    return name.toLowerCase().replace(' ', '-');
-}
+
