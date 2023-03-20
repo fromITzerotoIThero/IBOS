@@ -46,7 +46,7 @@ function App() {
             <ProductListItem
                 imgSrc={boy1}
                 imgAlt="My favorite CHOPAKI boy"
-                productName="Product that has a veeeeeeeeeeeeeeeeeeeery long description"
+                productName="Product that has a very long description that can span multiple lines"
                 currentPrice="12.99"
                 originalPrice="12.99"
                 discountPercentage="0"
@@ -56,10 +56,10 @@ function App() {
                 imgSrc={boy2}
                 imgAlt="My favorite CHOPAKI boy"
                 productName="Different product name that is too long and if it does overflow"
-                currentPrice="8.99"
-                originalPrice="8.99"
-                discountPercentage="0"
-                isDiscounted={false}
+                currentPrice="4.99"
+                originalPrice="9.99"
+                discountPercentage="50"
+                isDiscounted={true}
             />
             <ProductListItem
                 imgSrc={kitty}

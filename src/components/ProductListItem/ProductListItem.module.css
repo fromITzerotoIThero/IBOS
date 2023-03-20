@@ -21,8 +21,6 @@
     background-color: #cfd8dc;
     width: 80px;
     height: auto;
-    position: absolute;
-    z-index: -1;
 }
 
 .discount_band {
@@ -46,6 +44,7 @@
     width: 280px;
     height: 80px;
     padding: 0 24px 0 12px;
+
 }
 
 .price_row {
@@ -59,9 +58,8 @@
 }
 
 .product_name {
-    font-size: 1em;
+    font-size: 16px;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;

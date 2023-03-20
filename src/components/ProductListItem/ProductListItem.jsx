@@ -24,7 +24,7 @@ function ProductListItem({ imgSrc, imgAlt, productName, currentPrice, originalPr
                         <div>{originalPrice}$</div>
                     }
                 </div>
-                <div className={styles.product_name}>
+                <div className={styles.product_name} title={productName}>
                     {productName}
                 </div>
             </div>
