@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { supabase } from '../../services/supabase';
+import styles from './ProductList.module.css';
 import ProductListItem from '../ProductListItem/ProductListItem';
 
 
@@ -19,7 +20,7 @@ function ProductList() {
     }, []);
 
     return (
-        <div>
+        <div className={styles.container}>
             {products.map(product =>
                 <div key={product.id}>
                     <ProductListItem

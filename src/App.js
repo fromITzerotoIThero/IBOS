@@ -6,8 +6,6 @@ import Accordion from './components/Accordion/Accordion';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 import DomainDetails from './pages/DomainDetails/DomainDetails';
-import ProductList from './components/ProductList/ProductList';
-
 
 function App() {
 
@@ -40,7 +38,6 @@ function App() {
                     <Route path=":id" element={<DomainDetails />} />
                 </Route>
             </Routes>
-            <ProductList />
         </div>
     );
 }

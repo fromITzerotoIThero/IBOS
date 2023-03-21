@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useCallback } from 'react';
 import BasicCard from '../../components/BasicCard/BasicCard';
+import ProductList from '../../components/ProductList/ProductList';
 
 function WelcomeScreen() {
 
@@ -28,6 +29,7 @@ function WelcomeScreen() {
                     ariaLabel="Close welcome screen"
                     onClose={handleWelcomeScreenClose}
                 />)}
+            <ProductList />
 
         </div>
     );
