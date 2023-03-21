@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useCallback } from 'react';
-import styles from './WelcomeScreen.module.css';
 import BasicCard from '../../components/BasicCard/BasicCard';
 import ProductList from '../../components/ProductList/ProductList';
 
@@ -30,7 +29,7 @@ function WelcomeScreen() {
                     ariaLabel="Close welcome screen"
                     onClose={handleWelcomeScreenClose}
                 />)}
-            <div className={styles.welcome_products}><ProductList /></div>
+            <ProductList />
 
         </div>
     );
