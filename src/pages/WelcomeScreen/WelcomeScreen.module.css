@@ -1,0 +1,3 @@
+.welcome_products > div > div:nth-child(n+4) {
+    display: none;
+}
