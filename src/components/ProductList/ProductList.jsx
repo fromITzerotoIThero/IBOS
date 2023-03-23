@@ -35,8 +35,3 @@ function ProductList() {
 }
 
 export default ProductList;
-
-function modifyName(string) {
-    const name = string;
-    return name.toLowerCase().replace(' ', '-');
-}

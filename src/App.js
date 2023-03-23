@@ -6,6 +6,7 @@ import Accordion from './components/Accordion/Accordion';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 import DomainDetails from './pages/DomainDetails/DomainDetails';
+import ProductListPage from './pages/ProductListPage/ProductListPage';
 
 function App() {
 
@@ -38,6 +39,10 @@ function App() {
                     <Route path=":id" element={<DomainDetails />} />
                 </Route>
             </Routes>
+            <ProductListPage
+                targetBackwards="/"
+                targetForwards="/domainsoverview"
+            />
         </div>
     );
 }
