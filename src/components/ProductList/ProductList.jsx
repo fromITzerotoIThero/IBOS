@@ -24,6 +24,7 @@ function ProductList() {
             {products.map(product =>
                 <div key={product.id}>
                     <ProductListItem
+                        targetProduct={`/productpage/${product.id}`}
                         imgSrc={product.thumbnail_urls}
                         productName={product.name}
                         originalPrice={product.price}
