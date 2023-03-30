@@ -1,34 +1,41 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { supabase } from '../../services/supabase';
+import ProductPageTemplate from '../../components/ProductPageTemplate/ProductPageTemplate';
 import styles from './ProductPage.module.css';
-import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
+// import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
 
 function ProductPage({ imgSrc, imgAlt, productName, currentPrice, originalPrice, discountPercentage, isDiscounted }) {
 
+    const { id } = useParams();
+    const [product, setProduct] = useState(null);
+
+    useEffect(() => {
+        async function fetchData() {
+            const { data } = await supabase
+                .from('Products')
+                .select('*')
+                .eq('id', `${id}`)
+
+            setProduct(data[0]);
+        }
+        fetchData();
+    }, []);
+
+
     return (
         <div>
-            Hello, I'm your product!
-            {/* <div className={styles.header}>
-                <div className={styles.product_name}>{productName}</div>
-                <div>
-                    <div className={styles.price_row}>
-                        {isDiscounted === true
-                            ?
-                            <div>
-                                ${currentPrice} &nbsp;
-                                <span className={styles.before_discount}>${originalPrice}</span>
-                            </div>
-                            :
-                            <div>${originalPrice}</div>
-                        }
-                    </div>
-                    <button>
-                        <div className={styles.cart_icon}></div>
-                    </button>
-                </div>
-            </div>
-            <ImageCarousel /> */}
-
-
+            {product != null
+                ?
+                <ProductPageTemplate
+                    productName={product.name}
+                    originalPrice={product.price}
+                    productDescription={product.description}
+                />
+                :
+                <div className={styles.loading}>Loading...</div>
+            }
         </div>
     )
 }
