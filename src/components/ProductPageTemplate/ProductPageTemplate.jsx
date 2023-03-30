@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ProductPageTemplate.module.css';
 
 function ProductPageTemplate({ productName, isDiscounted, originalPrice, currentPrice, productDescription }) {
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -21,6 +22,7 @@ function ProductPageTemplate({ productName, isDiscounted, originalPrice, current
                         }
                     </div>
                     <button className={styles.cart_btn}>
+                        Add to cart
                     </button>
                 </div>
             </div>
@@ -32,6 +34,7 @@ function ProductPageTemplate({ productName, isDiscounted, originalPrice, current
             </div>
         </div>
     )
+
 }
 
 export default ProductPageTemplate;

@@ -1,7 +1,35 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
     width: 360px;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.2;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 24px;
+    padding: 1rem;
 }
 
 .price_row {
     font-size: 24px;
+}
+
+.cart_btn {
+    width: 8em;
+    background-color: var(--default-color);
+    color: #fff;
+    border: none;
+    font-size: 0.75rem;
+}
+
+.description {
+    padding: 1rem;
 }
