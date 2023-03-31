@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 240px;
+    overflow: hidden;
+    background-color: var(--image-grey);
+    color: #fff;
+}
+
+.img {
+    width: 360px;
+    height: auto;
+}
+
+.img_icon {
+    font-size: 13rem;
+}
