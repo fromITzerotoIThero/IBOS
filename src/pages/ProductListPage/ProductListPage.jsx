@@ -24,7 +24,6 @@ function ProductListPage({ pages, targetBackwards, targetForwards }) {
                     <ArrowBackIosNewIcon />
                 </NavLink>
 
-                {/* {pages} */}
 
                 <NavLink
                     className={styles.icons}

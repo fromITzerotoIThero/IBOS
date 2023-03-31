@@ -4,9 +4,8 @@ import { useParams } from 'react-router-dom';
 import { supabase } from '../../services/supabase';
 import ProductPageTemplate from '../../components/ProductPageTemplate/ProductPageTemplate';
 import styles from './ProductPage.module.css';
-// import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
 
-function ProductPage({ imgSrc, imgAlt, productName, currentPrice, originalPrice, discountPercentage, isDiscounted }) {
+function ProductPage() {
 
     const { id } = useParams();
     const [product, setProduct] = useState(null);
@@ -32,6 +31,8 @@ function ProductPage({ imgSrc, imgAlt, productName, currentPrice, originalPrice,
                     productName={product.name}
                     originalPrice={product.price}
                     productDescription={product.description}
+                    imgArray={product.thumbnail_urls}
+                    imgAlt={product.name}
                 />
                 :
                 <div className={styles.loading}>Loading...</div>
