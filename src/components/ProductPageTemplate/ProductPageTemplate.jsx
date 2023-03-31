@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './ProductPageTemplate.module.css';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ImageCarousel from '../ImageCarousel/ImageCarousel';
 
-function ProductPageTemplate({ productName, isDiscounted, originalPrice, currentPrice, productDescription }) {
+function ProductPageTemplate({ productName, isDiscounted, originalPrice, currentPrice, productDescription, imgArray, imgAlt }) {
 
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <div classname={styles.name}>
+                <div className={styles.name}>
                     {productName}
                 </div>
                 <div>
@@ -22,12 +24,16 @@ function ProductPageTemplate({ productName, isDiscounted, originalPrice, current
                         }
                     </div>
                     <button className={styles.cart_btn}>
-                        Add to cart
+                        <span>Add to cart</span>
+                        <ShoppingCartOutlinedIcon className={styles.cart_icon}/>
                     </button>
                 </div>
             </div>
             <div>
-                {/* <ImageCarousel /> */}
+                <ImageCarousel
+                    imgArray={imgArray}
+                    imgAlt={imgAlt}
+                />
             </div>
             <div className={styles.description}>
                 {productDescription}

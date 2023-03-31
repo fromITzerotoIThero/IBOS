@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1em 0;
     width: 360px;
     font-family: "Source Sans Pro", sans-serif;
     line-height: 1.2;
@@ -20,10 +19,15 @@
 
 .price_row {
     font-size: 24px;
+    padding: 4px;
 }
 
 .cart_btn {
-    width: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 9.5em;
+    padding: 4px 8px;
     background-color: var(--default-color);
     color: #fff;
     border: none;
@@ -31,5 +35,6 @@
 }
 
 .description {
-    padding: 1rem;
+    padding: 2rem 2rem 2rem 1rem;
+    font-size: 12px;
 }
