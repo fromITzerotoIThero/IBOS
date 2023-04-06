@@ -54,7 +54,7 @@ function ProductPage() {
                         </div>
                     </div>
                     <div>
-                        <img src={product.thumbnail_urls} alt={product.name} />
+                        <img src={product.thumbnail_urls[0]} alt={product.name} />
                     </div>
                     <div className={styles.description}>
                         {product.description}

@@ -26,8 +26,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 9.5em;
     padding: 4px 8px;
+    white-space: nowrap;
     background-color: var(--default-color);
     color: #fff;
     border: none;
@@ -35,6 +35,6 @@
 }
 
 .description {
-    padding: 2rem 2rem 2rem 1rem;
+    padding: 2rem;
     font-size: 12px;
 }
