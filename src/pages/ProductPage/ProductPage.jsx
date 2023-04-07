@@ -53,7 +53,7 @@ function ProductPage() {
                             </button>
                         </div>
                     </div>
-                    <div>
+                    <div className={styles.img_container}>
                         <img src={product.thumbnail_urls[0]} alt={product.name} />
                     </div>
                     <div className={styles.description}>
