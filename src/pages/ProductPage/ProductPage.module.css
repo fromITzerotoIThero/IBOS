@@ -34,13 +34,8 @@
     font-size: 0.75rem;
 }
 
-.img_container {
-    overflow: hidden;
-}
-
 .img_container img {
     width: 100%;
-    height: auto;
 }
 
 .description {
