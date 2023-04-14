@@ -34,6 +34,10 @@
     font-size: 0.75rem;
 }
 
+.img_container img {
+    width: 100%;
+}
+
 .description {
     padding: 2rem;
     font-size: 12px;
