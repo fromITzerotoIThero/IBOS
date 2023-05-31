@@ -32,7 +32,7 @@
     cursor: pointer;
 }
 
-.hidden {
+.arrow_container > .hidden {
     display: none;
 }
 

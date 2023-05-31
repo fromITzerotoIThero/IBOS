@@ -24,12 +24,17 @@ function ImageCarousel() {
     const rightArrow = isLastImg ? styles.hidden : styles.arrow;
 
     const prevImg = () => {
-        const newIndex = isFirstImg ? imgArray.length - 1 : currentIndex - 1;
+        const newIndex = isFirstImg ? 0 : currentIndex - 1;
         setCurrentIndex(newIndex);
     };
 
     const nextImg = () => {
         const newIndex = isLastImg ? imgArray.length - 1 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
+
+    const goToImg = (imgIndex) => {
+        const newIndex = imgIndex;
         setCurrentIndex(newIndex);
     };
 
@@ -46,8 +51,8 @@ function ImageCarousel() {
                             <ChevronRightIcon className={rightArrow} onClick={nextImg} />
 
                             <div className={styles.img_indicator}>
-                                {imgArray.map(img => (
-                                    <div key={img.url}><RadioButtonUncheckedOutlined /></div>
+                                {imgArray.map((img, imgIndex) => (
+                                    <div key={img.url} onClick={() => goToImg(imgIndex)}><RadioButtonUncheckedOutlined /></div>
                                 ))}
                             </div>
                         </div>
