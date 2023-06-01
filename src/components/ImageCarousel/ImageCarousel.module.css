@@ -33,7 +33,7 @@
 }
 
 .arrow_container > .hidden {
-    display: none;
+    visibility: hidden;
 }
 
 .img_indicator {
