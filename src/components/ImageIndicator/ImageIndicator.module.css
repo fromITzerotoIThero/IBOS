@@ -1,3 +1,11 @@
-.icon {
-    font-size: 8px;
+.img_indicator > .dot {
+    margin: 0 2px;
+    font-size: 0.5rem;
+    color: white;
+    stroke: var(--stroke-grey);
+    stroke-width: 1px;
+}
+
+.img_indicator > .dot.selected {
+    color: var(--stroke-grey);
 }

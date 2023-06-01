@@ -1,14 +1,15 @@
 import React from 'react';
 import styles from './ImageIndicator.module.css';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import CircleIcon from '@mui/icons-material/Circle';
 
-function ImageIndicator() {
+function ImageIndicator({ selectedImgIndex, index, onDotClick }) {
 
     return (
-        <div>
-            <CircleIcon className={styles.icon}/>
+        <div className={styles.img_indicator}>
+            <CircleIcon
+                className={`${styles.dot} ${selectedImgIndex === index ? styles.selected : ''}`}
+                onClick={onDotClick}
+            />
         </div>
     );
 
