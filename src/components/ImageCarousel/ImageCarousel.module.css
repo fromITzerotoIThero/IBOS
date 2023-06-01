@@ -36,19 +36,12 @@
     visibility: hidden;
 }
 
-.img_indicator {
+.img_indicator_container {
     position: absolute;
     top: 6.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    font-size: 1rem;
 }
 
-.img_indicator svg {
-    margin: 0 2px;
-    font-size: 0.5rem;
-    stroke: white;
-    stroke-width: 4px;
-}

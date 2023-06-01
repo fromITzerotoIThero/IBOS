@@ -4,8 +4,8 @@ import styles from './ImageCarousel.module.css';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import CropOriginalRoundedIcon from '@mui/icons-material/CropOriginalRounded';
-// import ImageIndicator from '../ImageIndicator/ImageIndicator';
-import { RadioButtonUncheckedOutlined } from '@mui/icons-material';
+import ImageIndicator from '../ImageIndicator/ImageIndicator';
+
 
 function ImageCarousel() {
 
@@ -50,9 +50,14 @@ function ImageCarousel() {
                             <ChevronLeftIcon className={leftArrow} onClick={prevImg} />
                             <ChevronRightIcon className={rightArrow} onClick={nextImg} />
 
-                            <div className={styles.img_indicator}>
+                            <div className={styles.img_indicator_container}>
                                 {imgArray.map((img, imgIndex) => (
-                                    <div key={img.url} onClick={() => goToImg(imgIndex)}><RadioButtonUncheckedOutlined /></div>
+                                    <ImageIndicator
+                                        key={img.url}
+                                        selectedImgIndex={imgIndex}
+                                        index={currentIndex}
+                                        onDotClick={() => goToImg(imgIndex)}
+                                    />
                                 ))}
                             </div>
                         </div>
@@ -66,3 +71,4 @@ function ImageCarousel() {
 }
 
 export default ImageCarousel;
+
