@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '../../services/supabase';
 import styles from './ProductPage.module.css';
+import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 function ProductPage() {
@@ -54,7 +55,10 @@ function ProductPage() {
                         </div>
                     </div>
                     <div className={styles.img_container}>
-                        <img src={product.thumbnail_urls[0]} alt={product.name} />
+                        <ImageCarousel
+                            imageArray={product.thumbnail_urls}
+                            imageAlt={product.name}
+                        />
                     </div>
                     <div className={styles.description}>
                         {product.description}
