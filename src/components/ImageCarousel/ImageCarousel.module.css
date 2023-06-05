@@ -8,7 +8,7 @@
     overflow: hidden;
 }
 
-.img {
+.image {
     width: 360px;
 }
 
@@ -36,7 +36,7 @@
     visibility: hidden;
 }
 
-.img_indicator_container {
+.indicator {
     position: absolute;
     top: 6.5rem;
     display: flex;

@@ -7,56 +7,62 @@ import CropOriginalRoundedIcon from '@mui/icons-material/CropOriginalRounded';
 import ImageIndicator from '../ImageIndicator/ImageIndicator';
 
 
-function ImageCarousel() {
+function ImageCarousel({ imageArray }) {
 
-    const imgArray = [
-        { url: "https://images.unsplash.com/photo-1677833766807-5598cc321858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" },
-        { url: "https://images.unsplash.com/photo-1684057044985-6cb9a99b4663?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" },
-        { url: "https://images.unsplash.com/photo-1684051489159-526760dbb8ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" },
-    ];
+    // const imageArray = [
+    //     { url: "https://images.unsplash.com/photo-1677833766807-5598cc321858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" },
+    //     { url: "https://images.unsplash.com/photo-1684057044985-6cb9a99b4663?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" },
+    //     { url: "https://images.unsplash.com/photo-1569317002804-ab77bcf1bce4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dW5zcGxhc2h8ZW58MHx8MHx8fDA%3D&w=1000&q=80" },
+    //     { url: "https://images.unsplash.com/photo-1553774521-44a3b4c5fbbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8&w=1000&q=80" },
+    //     { url: "https://images.unsplash.com/photo-1684051489159-526760dbb8ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" },
+    // ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const imgUrl = imgArray[currentIndex].url;
 
-    const isFirstImg = currentIndex === 0;
-    const isLastImg = currentIndex === imgArray.length - 1;
-    const leftArrow = isFirstImg ? styles.hidden : styles.arrow;
-    const rightArrow = isLastImg ? styles.hidden : styles.arrow;
+    if (imageArray === null || imageArray.length === 0) {
+        return;
+    }
 
-    const prevImg = () => {
-        const newIndex = isFirstImg ? 0 : currentIndex - 1;
+    const imageUrl = imageArray[currentIndex].url;
+
+    const isFirstImage = currentIndex === 0;
+    const isLastImage = currentIndex === imageArray.length - 1;
+    const leftArrow = isFirstImage ? styles.hidden : styles.arrow;
+    const rightArrow = isLastImage ? styles.hidden : styles.arrow;
+
+    const previousImage = () => {
+        const newIndex = isFirstImage ? 0 : currentIndex - 1;
         setCurrentIndex(newIndex);
     };
 
-    const nextImg = () => {
-        const newIndex = isLastImg ? imgArray.length - 1 : currentIndex + 1;
+    const nextImage = () => {
+        const newIndex = isLastImage ? imageArray.length - 1 : currentIndex + 1;
         setCurrentIndex(newIndex);
     };
 
-    const goToImg = (imgIndex) => {
-        const newIndex = imgIndex;
+    const goToImage = (imageIndex) => {
+        const newIndex = imageIndex;
         setCurrentIndex(newIndex);
     };
 
     return (
         <div className={styles.container}>
-            {imgArray != null
+            {imageArray != null
                 ?
                 <div>
-                    <img src={imgUrl} className={styles.img} alt={""} />
+                    <img src={imageUrl} className={styles.image} alt={""} />
 
-                    {imgArray.length > 1 && (
+                    {imageArray.length > 1 && (
                         <div className={styles.arrow_container}>
-                            <ChevronLeftIcon className={leftArrow} onClick={prevImg} />
-                            <ChevronRightIcon className={rightArrow} onClick={nextImg} />
+                            <ChevronLeftIcon className={leftArrow} onClick={previousImage} />
+                            <ChevronRightIcon className={rightArrow} onClick={nextImage} />
 
-                            <div className={styles.img_indicator_container}>
-                                {imgArray.map((img, imgIndex) => (
+                            <div className={styles.indicator}>
+                                {imageArray.map((image, imageIndex) => (
                                     <ImageIndicator
-                                        key={img.url}
-                                        selectedImgIndex={imgIndex}
-                                        index={currentIndex}
-                                        onDotClick={() => goToImg(imgIndex)}
+                                        key={image.url}
+                                        isActive={imageIndex === currentIndex}
+                                        onDotClick={() => goToImage(imageIndex)}
                                     />
                                 ))}
                             </div>
@@ -64,7 +70,7 @@ function ImageCarousel() {
                     )}
                 </div>
                 :
-                <CropOriginalRoundedIcon className={styles.img_icon} />
+                <CropOriginalRoundedIcon className={styles.image_icon} />
             }
         </div>
     );
