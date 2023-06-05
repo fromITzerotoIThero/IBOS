@@ -7,7 +7,7 @@ import CropOriginalRoundedIcon from '@mui/icons-material/CropOriginalRounded';
 import ImageIndicator from '../ImageIndicator/ImageIndicator';
 
 
-function ImageCarousel({ imageArray }) {
+function ImageCarousel({ imageArray, imageAlt }) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -15,7 +15,7 @@ function ImageCarousel({ imageArray }) {
         return;
     }
 
-    const imageUrl = imageArray[currentIndex].url;
+    const imageUrl = imageArray[currentIndex];
 
     const isFirstImage = currentIndex === 0;
     const isLastImage = currentIndex === imageArray.length - 1;
@@ -42,7 +42,7 @@ function ImageCarousel({ imageArray }) {
             {imageArray != null
                 ?
                 <div>
-                    <img src={imageUrl} className={styles.image} alt={""} />
+                    <img src={imageUrl} className={styles.image} alt={imageAlt} />
 
                     {imageArray.length > 1 && (
                         <div className={styles.arrow_container}>
