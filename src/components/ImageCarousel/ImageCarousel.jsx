@@ -52,7 +52,7 @@ function ImageCarousel({ imageArray, imageAlt }) {
                             <div className={styles.indicator}>
                                 {imageArray.map((image, imageIndex) => (
                                     <ImageIndicator
-                                        key={image.url}
+                                        key={image}
                                         isActive={imageIndex === currentIndex}
                                         onDotClick={() => goToImage(imageIndex)}
                                     />
