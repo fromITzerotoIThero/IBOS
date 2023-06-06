@@ -11,7 +11,7 @@ function ImageCarousel({ imageArray, imageAlt }) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    if (imageArray == null || imageArray.length === 0 ) {
+    if (imageArray == null || imageArray.length === 0) {
         return;
     }
 
@@ -19,48 +19,47 @@ function ImageCarousel({ imageArray, imageAlt }) {
 
     const isFirstImage = currentIndex === 0;
     const isLastImage = currentIndex === imageArray.length - 1;
-    const leftArrow = isFirstImage ? styles.hidden : styles.arrow;
-    const rightArrow = isLastImage ? styles.hidden : styles.arrow;
+    const leftArrowClassName = isFirstImage ? styles.hidden : styles.arrow;
+    const rightArrowClassName = isLastImage ? styles.hidden : styles.arrow;
 
-    const previousImage = () => {
+    const goToPreviousImage = () => {
         const newIndex = isFirstImage ? 0 : currentIndex - 1;
         setCurrentIndex(newIndex);
     };
 
-    const nextImage = () => {
+    const goToNextImage = () => {
         const newIndex = isLastImage ? imageArray.length - 1 : currentIndex + 1;
         setCurrentIndex(newIndex);
     };
 
-    const goToImage = (imageIndex) => {
-        const newIndex = imageIndex;
-        setCurrentIndex(newIndex);
-    };
 
     return (
         <div className={styles.container}>
             {imageArray != null
                 ?
-                <div>
+                <>
                     <img src={imageUrl} className={styles.image} alt={imageAlt} />
 
                     {imageArray.length > 1 && (
-                        <div className={styles.arrow_container}>
-                            <ChevronLeftIcon className={leftArrow} onClick={previousImage} />
-                            <ChevronRightIcon className={rightArrow} onClick={nextImage} />
+                        <>
+                            <div className={styles.arrow_container}>
+                                <ChevronLeftIcon className={leftArrowClassName} onClick={goToPreviousImage} />
+                                <ChevronRightIcon className={rightArrowClassName} onClick={goToNextImage} />
+                            </div>
 
                             <div className={styles.indicator}>
                                 {imageArray.map((image, imageIndex) => (
                                     <ImageIndicator
                                         key={image}
                                         isActive={imageIndex === currentIndex}
-                                        onDotClick={() => goToImage(imageIndex)}
+                                        onDotClick={() => setCurrentIndex(imageIndex)}
                                     />
                                 ))}
                             </div>
-                        </div>
+                        </>
+
                     )}
-                </div>
+                </>
                 :
                 <CropOriginalRoundedIcon className={styles.image_icon} />
             }

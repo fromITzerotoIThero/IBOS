@@ -38,7 +38,7 @@
 
 .indicator {
     position: absolute;
-    top: 6.5rem;
+    bottom: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
