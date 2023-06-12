@@ -1,19 +1,47 @@
 .container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 360px;
     height: 240px;
     overflow: hidden;
-    background-color: var(--image-grey);
-    color: #fff;
 }
 
-.img {
+.image {
     width: 360px;
-    height: auto;
 }
 
-.img_icon {
-    font-size: 13rem;
+.arrow_container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
 }
+
+.arrow_container > .arrow,
+.arrow_container > .hidden {
+    font-size: 2rem;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow_container > .hidden {
+    visibility: hidden;
+}
+
+.indicator {
+    position: absolute;
+    bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+

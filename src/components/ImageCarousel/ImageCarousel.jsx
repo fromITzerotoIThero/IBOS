@@ -6,47 +6,66 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import CropOriginalRoundedIcon from '@mui/icons-material/CropOriginalRounded';
 import ImageIndicator from '../ImageIndicator/ImageIndicator';
 
-function ImageCarousel({ imgArray, imgAlt }) {
+
+function ImageCarousel({ imageArray, imageAlt }) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const imgUrl = imgArray[currentIndex];
 
-    const prevImg = () => {
-        const isFirstImg = currentIndex === 0;
-        const newIndex = isFirstImg ? imgArray.length - 1 : currentIndex - 1;
+    if (imageArray == null || imageArray.length === 0) {
+        return;
+    }
+
+    const imageUrl = imageArray[currentIndex];
+
+    const isFirstImage = currentIndex === 0;
+    const isLastImage = currentIndex === imageArray.length - 1;
+    const leftArrowClassName = isFirstImage ? styles.hidden : styles.arrow;
+    const rightArrowClassName = isLastImage ? styles.hidden : styles.arrow;
+
+    const goToPreviousImage = () => {
+        const newIndex = isFirstImage ? 0 : currentIndex - 1;
         setCurrentIndex(newIndex);
     };
 
-    const nextImg = () => {
-        const isLastImg = currentIndex === imgArray.length - 1;
-        const newIndex = isLastImg ? imgArray.length - 1 : currentIndex + 1;
+    const goToNextImage = () => {
+        const newIndex = isLastImage ? imageArray.length - 1 : currentIndex + 1;
         setCurrentIndex(newIndex);
     };
+
 
     return (
         <div className={styles.container}>
-            {imgArray != null
+            {imageArray != null
                 ?
-                <div>
-                    <img src={imgUrl} alt={imgAlt} className={styles.img} />
-                    <div>
-                        <ChevronLeftIcon onClick={prevImg} />
-                    </div>
-                    <div>
-                        <ChevronRightIcon onClick={nextImg} />
-                    </div>
-                    <div>
-                        {imgArray.map((img, imgIndex) => (
-                            <ImageIndicator />
-                        ))}
-                    </div>
-                </div>
+                <>
+                    <img src={imageUrl} className={styles.image} alt={imageAlt} />
+
+                    {imageArray.length > 1 && (
+                        <>
+                            <div className={styles.arrow_container}>
+                                <ChevronLeftIcon className={leftArrowClassName} onClick={goToPreviousImage} />
+                                <ChevronRightIcon className={rightArrowClassName} onClick={goToNextImage} />
+                            </div>
+
+                            <div className={styles.indicator}>
+                                {imageArray.map((image, imageIndex) => (
+                                    <ImageIndicator
+                                        key={image}
+                                        isActive={imageIndex === currentIndex}
+                                        onDotClick={() => setCurrentIndex(imageIndex)}
+                                    />
+                                ))}
+                            </div>
+                        </>
+
+                    )}
+                </>
                 :
-                <CropOriginalRoundedIcon className={styles.img_icon} />
+                <CropOriginalRoundedIcon className={styles.image_icon} />
             }
         </div>
     );
 }
 
-
 export default ImageCarousel;
+
