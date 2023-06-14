@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Counter from './features/counter/Counter';
 import Header from './components/Header/Header';
 import Accordion from './components/Accordion/Accordion';
 import DomainsOverview from './components/DomainsOverview/DomainsOverview';
@@ -22,6 +23,7 @@ function App() {
     return (
         <div>
             <Header />
+            <Counter />
             <Routes>
                 <Route
                     path="/"
