@@ -43,7 +43,7 @@ function DomainDetails() {
                     </div>
                 </div>
 
-                : <div>Loading...</div>
+                : <div className={styles.loading}>Loading...</div>
             }
         </div>
     );
