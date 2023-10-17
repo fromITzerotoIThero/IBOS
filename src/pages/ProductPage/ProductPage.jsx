@@ -34,7 +34,7 @@ function ProductPage() {
 
 
     return (
-        <div>
+        <>
             {product != null
                 ?
                 <>
@@ -78,7 +78,7 @@ function ProductPage() {
                 :
                 <div className={styles.loading}>Loading...</div>
             }
-        </div>
+        </>
     )
 }
 
