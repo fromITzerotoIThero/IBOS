@@ -19,7 +19,7 @@ function DomainsOverview() {
     }, []);
 
     return (
-        <div>
+        <div className={styles.container}>
             {domains.map(domain =>
                 <div className={styles[modifyName(domain.name)]}>
                     <BasicCard title={domain.name} description={domain.short_description} buttonText="Learn more" buttonLink={`/domaindetails/${domain.id}`} key={domain.id}/>
