@@ -7,6 +7,8 @@ import DomainsOverview from './components/DomainsOverview/DomainsOverview';
 import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 import DomainDetails from './pages/DomainDetails/DomainDetails';
 import ProductPage from './pages/ProductPage/ProductPage';
+import ImageCarousel from './components/ImageCarousel/ImageCarousel';
+import { sampleImageArray } from './utils/sample-image-array';
 
 function App() {
 
@@ -22,6 +24,9 @@ function App() {
     return (
         <div>
             <Header />
+            <ImageCarousel
+                imageArray={sampleImageArray}
+            />
             <Routes>
                 <Route
                     path="/"

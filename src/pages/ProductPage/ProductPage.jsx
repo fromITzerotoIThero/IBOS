@@ -5,7 +5,7 @@ import { supabase } from '../../services/supabase';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment } from '../../features/counter/counterSlice';
 import styles from './ProductPage.module.css';
-import ShoppingCartIndicator from '../../components/ShoppingCartIndicator/ShoppingCartIndicator';
+import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 
@@ -74,7 +74,16 @@ function ProductPage() {
                             {product.description}
                         </div>
                     </div>
-                </>
+                    <div className={styles.img_container}>
+                        <ImageCarousel
+                            imageArray={product.thumbnail_urls}
+                            imageAlt={product.name}
+                        />
+                    </div>
+                    <div className={styles.description}>
+                        {product.description}
+                    </div>
+                </div>
                 :
                 <div className={styles.loading}>Loading...</div>
             }
