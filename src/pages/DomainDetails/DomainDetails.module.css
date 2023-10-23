@@ -1,5 +1,4 @@
 .container {
-    width: 360px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,4 +25,14 @@
 
 .strategic-thinking {
     --theme-color: var(--strategic-thinking);
+}
+
+.loading {
+    width: 360px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
 }

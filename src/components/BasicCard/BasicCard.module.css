@@ -1,6 +1,6 @@
 .card {
     width: 300px;
-    margin: 2em 1em;
+    margin: 2em auto;
     position: relative;
     font-family: "Source Sans Pro", sans-serif;
     box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
