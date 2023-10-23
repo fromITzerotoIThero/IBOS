@@ -38,9 +38,6 @@ function ProductPage() {
             {product != null
                 ?
                 <>
-                    <ShoppingCartIndicator
-                        count={count}
-                    />
                     <div className={styles.container}>
                         <div className={styles.header}>
                             <div className={styles.name}>
@@ -83,7 +80,7 @@ function ProductPage() {
                     <div className={styles.description}>
                         {product.description}
                     </div>
-                </div>
+                </>
                 :
                 <div className={styles.loading}>Loading...</div>
             }
