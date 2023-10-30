@@ -71,7 +71,7 @@ function ProductPage() {
                             {product.description}
                         </div>
                     </div>
-                    <div className={styles.img_container}>
+                    {/* <div className={styles.img_container}>
                         <ImageCarousel
                             imageArray={product.thumbnail_urls}
                             imageAlt={product.name}
@@ -79,7 +79,7 @@ function ProductPage() {
                     </div>
                     <div className={styles.description}>
                         {product.description}
-                    </div>
+                    </div> */}
                 </>
                 :
                 <div className={styles.loading}>Loading...</div>
