@@ -3,6 +3,8 @@ import styles from './Header.module.css';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ListIcon from '@mui/icons-material/List';
 import NavBarEntry from '../NavBarEntry/NavBarEntry';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+
 
 function Header() {
 
@@ -19,6 +21,9 @@ function Header() {
                 icon={<ListIcon />}
                 entryName="Domains"
             />
+            <div className={styles.cart_icon}>
+                <ShoppingCartOutlinedIcon />
+            </div>
         </div>
     );
 
