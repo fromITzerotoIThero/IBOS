@@ -3,10 +3,12 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '../../services/supabase';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment } from '../../features/counter/counterSlice';
+// import { increment } from '../../features/counter/counterSlice';
+import { addItem } from '../../features/ShoppingCart/shoppingCartSlice';
 import styles from './ProductPage.module.css';
 import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShoppingCartIndicator from '../../features/ShoppingCart/ShoppingCartIndicator';
 
 
 function ProductPage() {
@@ -17,7 +19,7 @@ function ProductPage() {
     const isDiscounted = false;
     const currentPrice = null;
 
-    const count = useSelector((state) => state.counter.value)
+    // const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -57,10 +59,11 @@ function ProductPage() {
                                 </div>
                                 <button
                                     className={styles.cart_btn}
-                                    onClick={() => dispatch(increment())}
+                                    onClick={() => dispatch(addItem())}
                                 >
                                     <span>Add to cart</span>
                                     <ShoppingCartOutlinedIcon className={styles.cart_icon} />
+                                    <ShoppingCartIndicator />
                                 </button>
                             </div>
                         </div>
