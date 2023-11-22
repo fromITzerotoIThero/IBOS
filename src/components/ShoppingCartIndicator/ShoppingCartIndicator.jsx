@@ -1,18 +1,20 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectItemCount } from '../../app/shoppingCartSlice';
 import styles from './ShoppingCartIndicator.module.css';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import CircleIcon from '@mui/icons-material/Circle';
 
-function ShoppingCartIndicator({ count }) {
+function ShoppingCartIndicator() {
+    const itemCount = useSelector(selectItemCount);
+
+    if (itemCount === 0) {
+        return null;
+    }
 
     return (
-        <div className={styles.cart_indicator}>
-            <ShoppingCartOutlinedIcon className={styles.cart_icon_navbar} />
-            <CircleIcon className={styles.circle_icon} />
-            <span className={styles.count}>{count}</span>
+        <div className={styles.container}>
+            <span className={styles.item_count}>{itemCount}</span>
         </div>
     );
-
 }
 
 export default ShoppingCartIndicator;

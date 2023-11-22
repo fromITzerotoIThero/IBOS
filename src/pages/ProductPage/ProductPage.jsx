@@ -1,26 +1,22 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { supabase } from '../../services/supabase';
-import { useSelector, useDispatch } from 'react-redux';
-// import { increment } from '../../features/counter/counterSlice';
-import { addItem } from '../../features/ShoppingCart/shoppingCartSlice';
+import { addItem } from '../../app/shoppingCartSlice';
 import styles from './ProductPage.module.css';
 import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import ShoppingCartIndicator from '../../features/ShoppingCart/ShoppingCartIndicator';
 
 
 function ProductPage() {
 
     const { id } = useParams();
     const [product, setProduct] = useState(null);
+    const dispatch = useDispatch();
 
     const isDiscounted = false;
     const currentPrice = null;
-
-    // const count = useSelector((state) => state.counter.value)
-    const dispatch = useDispatch();
 
     useEffect(() => {
         async function fetchData() {
@@ -63,7 +59,6 @@ function ProductPage() {
                                 >
                                     <span>Add to cart</span>
                                     <ShoppingCartOutlinedIcon className={styles.cart_icon} />
-                                    <ShoppingCartIndicator />
                                 </button>
                             </div>
                         </div>

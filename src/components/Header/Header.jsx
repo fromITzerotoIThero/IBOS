@@ -4,6 +4,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ListIcon from '@mui/icons-material/List';
 import NavBarEntry from '../NavBarEntry/NavBarEntry';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShoppingCartIndicator from '../ShoppingCartIndicator/ShoppingCartIndicator';
 
 
 function Header() {
@@ -21,8 +22,9 @@ function Header() {
                 icon={<ListIcon />}
                 entryName="Domains"
             />
-            <div className={styles.cart_icon}>
+            <div className={styles.cart}>
                 <ShoppingCartOutlinedIcon />
+                <ShoppingCartIndicator />
             </div>
         </div>
     );

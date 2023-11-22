@@ -1,3 +1,21 @@
-.cart_indicator {
-    color: var(--default-color)
+.container {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    background-color: var(--executing);
+    border-radius: 50%;
+}
+
+.item_count {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 8px;
+    color: #fff;
 }
