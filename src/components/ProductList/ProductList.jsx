@@ -41,7 +41,7 @@ function ProductList() {
                     </div>
                 )}
             </div>
-            <div>
+            <div className={styles.pagination_buttons}>
                 <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Previous</button>
                 <span>{currentPage}</span>
                 <button onClick={() => handlePageChange(currentPage + 1)}>Next</button>
