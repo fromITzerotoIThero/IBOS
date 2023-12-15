@@ -5,17 +5,17 @@ const productsSlice = createSlice({
     initialState: {
         data: [],
         currentPage: 1,
-        totalPages: 1,
+        // totalPages: 1,
     },
     reducers: {
         setProducts: (state, action) => {
-            state.data = action.payload;
+            // state.data = action.payload;
         },
         setCurrentPage: (state, action) => {
-            state.currentPage = action.payload;
+            // state.currentPage = action.payload;
         },
         setTotalPages: (state, action) => {
-            state.totalPages = action.payload;
+            // state.totalPages = action.payload;
         },
     },
 });
