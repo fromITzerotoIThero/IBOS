@@ -9,14 +9,16 @@ function ProductList() {
 
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [count, setCount] = useState(0);
     const productsPerPage = 10;
 
     useEffect(() => {
         async function fetchData() {
-            const { data } = await supabase
+            const { data, count } = await supabase
                 .from('Products')
-                .select()
-                .range((currentPage - 1) * productsPerPage, currentPage * productsPerPage - 1);
+                .select('*', { count: 'exact' })
+                .range((currentPage - 1) * productsPerPage, currentPage * productsPerPage - 1)
+            setCount(count);
             setProducts(data);
         }
         fetchData();
@@ -44,7 +46,7 @@ function ProductList() {
             <div className={styles.pagination_buttons}>
                 <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Previous</button>
                 <span>{currentPage}</span>
-                <button onClick={() => handlePageChange(currentPage + 1)}>Next</button>
+                <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage >= count / productsPerPage}>Next</button>
             </div>
         </>
     );
