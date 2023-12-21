@@ -1,11 +1,14 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { supabase } from '../../services/supabase';
 import styles from './ProductList.module.css';
 import ProductListItem from '../ProductListItem/ProductListItem';
 
 
 function ProductList() {
+
+    const location = useLocation();
 
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -14,19 +17,25 @@ function ProductList() {
 
     useEffect(() => {
         async function fetchData() {
+            const pageParam = new URLSearchParams(location.search).get('page');
+            const page = pageParam ? parseInt(pageParam, 10) : 1;
             const { data, count } = await supabase
                 .from('Products')
                 .select('*', { count: 'exact' })
                 .range((currentPage - 1) * productsPerPage, currentPage * productsPerPage - 1)
             setCount(count);
             setProducts(data);
+            setCurrentPage(page);
         }
         fetchData();
 
-    }, [currentPage]);
+    }, [currentPage, location.search]);
 
     const handlePageChange = (newPage) => {
-        setCurrentPage(newPage)
+        const query = new URLSearchParams(location.search);
+        query.set('page', newPage);
+        // history.pushState(`${location.pathname}?${query.toString()}`);
+        // setCurrentPage(newPage)
     };
 
     return (
