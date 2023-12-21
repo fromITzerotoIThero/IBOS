@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { supabase } from '../../services/supabase';
 import styles from './ProductList.module.css';
 import ProductListItem from '../ProductListItem/ProductListItem';
@@ -9,6 +9,7 @@ import ProductListItem from '../ProductListItem/ProductListItem';
 function ProductList() {
 
     const location = useLocation();
+    const navigate = useNavigate();
 
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -34,8 +35,8 @@ function ProductList() {
     const handlePageChange = (newPage) => {
         const query = new URLSearchParams(location.search);
         query.set('page', newPage);
-        // history.pushState(`${location.pathname}?${query.toString()}`);
-        // setCurrentPage(newPage)
+        navigate(`${location.pathname}?${query.toString()}`);
+        setCurrentPage(newPage)
     };
 
     return (
