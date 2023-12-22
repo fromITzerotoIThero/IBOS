@@ -9,12 +9,24 @@ import ProductListItem from '../ProductListItem/ProductListItem';
 function ProductList() {
 
     const location = useLocation();
+    console.log({ location });
     const navigate = useNavigate();
 
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [count, setCount] = useState(0);
     const productsPerPage = 10;
+
+    // Since count never changes, I thought no need to fetch it everytime fetchData() runs?
+    // useEffect(() => {
+    //     async function fetchCount() {
+    //         const { count } = await supabase
+    //             .from('Products')
+    //             .select('*', { count: 'exact' });
+    //         setCount(count);
+    //     }
+    //     fetchCount();
+    // }, []);
 
     useEffect(() => {
         async function fetchData() {
@@ -23,7 +35,7 @@ function ProductList() {
             const { data, count } = await supabase
                 .from('Products')
                 .select('*', { count: 'exact' })
-                .range((currentPage - 1) * productsPerPage, currentPage * productsPerPage - 1)
+                .range((currentPage - 1) * productsPerPage, currentPage * productsPerPage - 1);
             setCount(count);
             setProducts(data);
             setCurrentPage(page);
