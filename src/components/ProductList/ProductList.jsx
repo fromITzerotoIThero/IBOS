@@ -35,7 +35,7 @@ function ProductList() {
             const { data, count } = await supabase
                 .from('Products')
                 .select('*', { count: 'exact' })
-                .range((currentPage - 1) * productsPerPage, currentPage * productsPerPage - 1);
+                .range((page - 1) * productsPerPage, page * productsPerPage - 1);
             setCount(count);
             setProducts(data);
             setCurrentPage(page);
