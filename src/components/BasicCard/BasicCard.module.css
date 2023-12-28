@@ -1,5 +1,5 @@
 .card {
-    width: 300px;
+    max-width: 300px;
     margin: 2em auto;
     position: relative;
     font-family: "Source Sans Pro", sans-serif;
@@ -47,4 +47,10 @@
     border: none;
     background-color: rgba(255, 255, 255, 0);
     color: var(--default-color);
+}
+
+@media (min-width: 420px) {
+    .card {
+        max-width: 360px;
+    }
 }

@@ -1,6 +1,7 @@
 .product {
     text-decoration: none;
     color: #000;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .product:hover {
@@ -11,9 +12,7 @@
     display: flex;
     align-items: center;
     margin: 1em 0;
-    width: 360px;
     height: 80px;
-    font-family: "Source Sans Pro", sans-serif;
     line-height: 1.2;
 }
 
@@ -21,7 +20,6 @@
     width: 80px;
     height: 80px;
     position: relative;
-    overflow: hidden;
 }
 
 .image {
@@ -50,13 +48,13 @@
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    width: 280px;
     height: 80px;
     padding: 0 24px 0 12px;
 
 }
 
 .price_row {
+    padding-bottom: 4px;
     font-size: 24px;
 }
 
