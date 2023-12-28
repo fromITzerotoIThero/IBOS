@@ -6,7 +6,7 @@
 }
 
 .details {
-    padding: 24px 28px;
+    padding: 24px;
     max-width: 480px;
     font-size: 1em
 }
@@ -43,12 +43,16 @@
 @media (min-width: 280px) {
     .accordion {
         padding: 0 1rem;
-        max-width: 440px;
+        max-width: 464px;
     }
 }
 
 @media (min-width: 360px) {
     .accordion {
         padding: 0.5rem 1.5rem;
+    }
+
+    .details {
+        padding: 2rem;
     }
 }

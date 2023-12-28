@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
 
 .collapsed {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    /* width: 300px; */
     padding: 0 1.25em;
-    /* font-family: "Source Sans Pro", sans-serif; */
     line-height: 1.2;
     background-color: var(--background-grey);
     box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
