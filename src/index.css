@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #eee;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 *,
