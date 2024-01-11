@@ -3,7 +3,19 @@ import styles from './BasicCard.module.css';
 import { Link } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 
-function BasicCard({ title, description, buttonText, buttonLink, showCloseButton, onClose, ariaLabel }) {
+type BasicCardProps = {
+    title: string;
+    description: string;
+    buttonText: string;
+    buttonLink: string;
+    showCloseButton: boolean;
+    onClose: () => boolean;
+    ariaLabel: string;
+};
+
+function BasicCard( props : BasicCardProps) {
+
+    const { title, description, buttonText, buttonLink, showCloseButton, onClose, ariaLabel } = props;
 
     return (
         <div className={styles.card}>
