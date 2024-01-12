@@ -16,9 +16,15 @@ Thank you for checking out this repository!
 # 0. Disclaimer
 ## 🚧 Code Under Construction 🚧
 Dear Visitor!  
-Bear in mind that the project was started when I was as fresh as one can be when embarking on a programming journey 🐤 (I barely even knew JS syntax back then! 🤦‍♀️)  
-I am well aware that this code needs a facelift, a makeover, and probably, at some point, a full-blown refactoring mission! 🔥🧙‍♂🔥  
-It's on the horizon, but first I got some other web-development beasts to fight! 😉
+  
+  Just a heads-up, this project was started when I was as fresh as one can be in programming 🐤 (I barely even knew JS syntax back then! 🤦‍♀️).  
+  If you're interested in checking out my coding skills, here are some of my latest commits:
+
+1. https://github.com/fromITzerotoIThero/IBOS/commit/2c4d466aaee8335611c77898648e7b288bbe26c1
+
+2. https://github.com/fromITzerotoIThero/IBOS/blob/master/src/components/BasicCard/BasicCard.tsx
+
+I very much appreciate code refactoring ❤️, but with a ton of things on my learning plate, I'm focusing on adding new features rather than fine-tuning the old code.  
 
 # 1. Introduction
 
