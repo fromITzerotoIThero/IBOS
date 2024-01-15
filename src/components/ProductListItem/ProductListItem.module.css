@@ -11,7 +11,7 @@
 .container {
     display: flex;
     align-items: center;
-    margin: 1em 0;
+    margin: 1em 4%;
     height: 80px;
     line-height: 1.2;
 }
