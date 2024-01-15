@@ -17,17 +17,6 @@ function ProductList() {
     const [count, setCount] = useState(0);
     const productsPerPage = 10;
 
-    // Since count never changes, I thought no need to fetch it everytime fetchData() runs?
-    // useEffect(() => {
-    //     async function fetchCount() {
-    //         const { count } = await supabase
-    //             .from('Products')
-    //             .select('*', { count: 'exact' });
-    //         setCount(count);
-    //     }
-    //     fetchCount();
-    // }, []);
-
     useEffect(() => {
         async function fetchData() {
             const pageParam = new URLSearchParams(location.search).get('page');
