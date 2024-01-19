@@ -34,7 +34,7 @@ function App() {
                 />
                 <Route path="/domainsoverview" element={<DomainsOverview />} />
                 <Route path="/accordion" element={<Accordion />} />
-                <Route path="/domaindetails">
+                <Route path="/domainsoverview/domaindetails">
                     <Route path=":id" element={<DomainDetails />} />
                 </Route>
                 <Route path="/productpage">
