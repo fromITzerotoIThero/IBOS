@@ -13,7 +13,7 @@ type BasicCardProps = {
     ariaLabel: string;
 };
 
-function BasicCard( props : BasicCardProps) {
+function BasicCard( props : BasicCardProps ) {
 
     const { title, description, buttonText, buttonLink, showCloseButton, onClose, ariaLabel } = props;
 
