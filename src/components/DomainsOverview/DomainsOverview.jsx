@@ -26,7 +26,7 @@ function DomainsOverview() {
                         title={domain.name}
                         description={domain.short_description}
                         buttonText="Learn more"
-                        buttonLink={`/domainsoverview/domaindetails/${domain.id}`}
+                        buttonLink={`/domaindetails/${domain.id}`}
                         key={domain.id} />
                 </div>
 
