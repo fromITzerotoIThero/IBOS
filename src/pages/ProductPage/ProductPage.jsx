@@ -40,7 +40,7 @@ function ProductPage() {
                             <div className={styles.name}>
                                 {product.name}
                             </div>
-                            <div>
+                            <div className={styles.price_and_cart_button}>
                                 <div className={styles.price_row}>
                                     {isDiscounted === true
                                         ?
