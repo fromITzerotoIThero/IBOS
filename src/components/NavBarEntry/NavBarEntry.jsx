@@ -2,11 +2,10 @@ import React from 'react';
 import styles from './NavBarEntry.module.css';
 import { NavLink, useLocation } from 'react-router-dom';
 
-function NavBarEntry({ targetName, entryName, icon, matchingPath }) {
+function NavBarEntry({ targetName, entryName, icon, matchingPrefixes }) {
 
     const { pathname } = useLocation();
-    const modifiedPathname = pathname.slice(0, 7);
-    const isActive = matchingPath.includes(modifiedPathname);
+    const isActive = matchingPrefixes?.some(prefix => comparePathNamePrefixes(pathname, prefix)) || targetName === pathname;
 
     return (
         <NavLink
@@ -16,6 +15,12 @@ function NavBarEntry({ targetName, entryName, icon, matchingPath }) {
             {entryName}
         </NavLink>
     );
+}
+
+function comparePathNamePrefixes(pathname, prefix){
+    const pathNameSegments = pathname.split('/');
+    const prefixSegments = prefix.split('/');
+    return prefixSegments.every((prefixSegment, index) => prefixSegment === pathNameSegments[index])
 }
 
 export default NavBarEntry;
