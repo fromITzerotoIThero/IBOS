@@ -13,12 +13,14 @@ function Header() {
         <div className={styles.header}>
             <NavBarEntry
                 targetName="/"
+                matchingPath={["/"]}
                 icon={<HomeOutlinedIcon />}
                 entryName="Welcome"
             />
 
             <NavBarEntry
                 targetName="/domainsoverview"
+                matchingPath={["/domain"]}
                 icon={<ListIcon />}
                 entryName="Domains"
             />
