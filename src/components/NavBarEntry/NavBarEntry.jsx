@@ -17,10 +17,13 @@ function NavBarEntry({ targetName, entryName, icon, matchingPrefixes }) {
     );
 }
 
-function comparePathNamePrefixes(pathname, prefix){
+function comparePathNamePrefixes(pathname, prefix) {
     const pathNameSegments = pathname.split('/');
+    console.log(pathNameSegments);
     const prefixSegments = prefix.split('/');
-    return prefixSegments.every((prefixSegment, index) => prefixSegment === pathNameSegments[index])
+    console.log(prefixSegments);
+
+    return prefixSegments.every((prefixSegment, index) => prefixSegment === pathNameSegments[index]);
 }
 
 export default NavBarEntry;
