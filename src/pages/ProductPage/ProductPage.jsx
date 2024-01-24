@@ -6,6 +6,7 @@ import { supabase } from '../../services/supabase';
 import { addItem } from '../../app/shoppingCartSlice';
 import styles from './ProductPage.module.css';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
 
 
 function ProductPage() {
@@ -61,9 +62,10 @@ function ProductPage() {
                                 </button>
                             </div>
                         </div>
-                        <div className={styles.img_container}>
-                            <img src={product.thumbnail_urls[0]} alt={product.name} />
-                        </div>
+                        <ImageCarousel
+                            imageArray={product.thumbnail_urls}
+                            imageAlt={product.name}
+                        />
                         <div className={styles.description}>
                             {product.description}
                         </div>

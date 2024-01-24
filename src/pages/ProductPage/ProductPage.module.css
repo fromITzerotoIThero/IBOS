@@ -6,8 +6,7 @@
     line-height: 1.2;
 }
 
-.header,
-.loading {
+.header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,13 +42,14 @@
     font-size: 0.75rem;
 }
 
-.img_container img {
-    width: 100%;
-}
-
 .description {
     padding: 1rem;
     font-size: 12px;
+}
+
+.loading {
+    font-size: 24px;
+    padding: 1rem;
 }
 
 @media (min-width: 320px) {
