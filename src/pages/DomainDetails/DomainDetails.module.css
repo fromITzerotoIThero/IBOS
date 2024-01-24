@@ -42,14 +42,14 @@
 
 @media (min-width: 280px) {
     .accordion {
-        padding: 0 1rem;
-        max-width: 464px;
+        padding: 0 24px;
+        max-width: 480px;
     }
 }
 
 @media (min-width: 360px) {
     .accordion {
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 2rem;
     }
 
     .details {

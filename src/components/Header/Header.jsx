@@ -19,6 +19,7 @@ function Header() {
 
             <NavBarEntry
                 targetName="/domainsoverview"
+                matchingPrefixes={["/domainsoverview", "/domaindetails"]}
                 icon={<ListIcon />}
                 entryName="Domains"
             />
