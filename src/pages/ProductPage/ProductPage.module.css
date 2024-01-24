@@ -3,17 +3,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Source Sans Pro", sans-serif;
     line-height: 1.2;
 }
 
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     font-size: 24px;
     padding: 1rem;
+}
+
+.name {
+    padding-bottom: 1rem;
+}
+
+.price_and_cart_button {
+    display: flex;
+    gap: 0.5rem;
 }
 
 .price_row {
@@ -33,15 +42,31 @@
     font-size: 0.75rem;
 }
 
-.img_container img {
-    width: 100%;
-}
-
 .description {
-    padding: 2rem;
+    padding: 1rem;
     font-size: 12px;
 }
 
 .loading {
-    width: inherit;
+    font-size: 24px;
+    padding: 1rem;
+}
+
+@media (min-width: 320px) {
+    .header {
+        flex-direction: row;
+    }
+
+    .name {
+        padding: 0 1rem 0 0;
+    }
+
+    .price_and_cart_button {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .description {
+        padding: 1rem 2rem;
+    }
 }
