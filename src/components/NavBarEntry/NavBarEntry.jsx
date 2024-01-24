@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './NavBarEntry.module.css';
 import { NavLink, useLocation } from 'react-router-dom';
+import { comparePathNamePrefixes } from '../../utils/pathUtils';
 
 function NavBarEntry({ targetName, entryName, icon, matchingPrefixes }) {
 
@@ -15,15 +16,6 @@ function NavBarEntry({ targetName, entryName, icon, matchingPrefixes }) {
             {entryName}
         </NavLink>
     );
-}
-
-function comparePathNamePrefixes(pathname, prefix) {
-    const pathNameSegments = pathname.split('/');
-    console.log(pathNameSegments);
-    const prefixSegments = prefix.split('/');
-    console.log(prefixSegments);
-
-    return prefixSegments.every((prefixSegment, index) => prefixSegment === pathNameSegments[index]);
 }
 
 export default NavBarEntry;
