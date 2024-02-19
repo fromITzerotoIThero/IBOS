@@ -13,7 +13,7 @@
     align-items: center;
     width: 100%;
     font-size: 24px;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .name {
@@ -43,18 +43,21 @@
 }
 
 .description {
-    padding: 1rem;
-    font-size: 12px;
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .loading {
     font-size: 24px;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 @media (min-width: 320px) {
     .header {
         flex-direction: row;
+        padding: 2rem;
     }
 
     .name {
@@ -67,6 +70,11 @@
     }
 
     .description {
-        padding: 1rem 2rem;
+        padding: 2rem;
+        font-size: inherit;
+    }
+
+    .loading {
+        padding: 2rem;
     }
 }
